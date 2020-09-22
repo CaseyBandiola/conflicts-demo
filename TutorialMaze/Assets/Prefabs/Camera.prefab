@@ -201,7 +201,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   visiblePlayer: []
-  detectionStatus: {fileID: 0}
+  detectionStatus: {fileID: 8231224280467894470, guid: 35e8c7b4c7d800d42a39f572b96fb931,
+    type: 3}
 --- !u!60 &312920922676570380
 PolygonCollider2D:
   m_ObjectHideFlags: 0

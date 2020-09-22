@@ -10,13 +10,16 @@ public class PlayerController : MonoBehaviour
     public int evidenceCollected;
     public Text evidenceAmt;
     public Text playerWon;
+    public Text detectionStatus;
     private int maxScore = 3;
     private bool hasWon;
+    private bool isDetected;
     // Start is called before the first frame update
     void Start(){
         speed = 10.0f;
         evidenceCollected = 0;
         hasWon = false;
+        isDetected = false;
     }
 
     // Update is called once per frame
@@ -84,6 +87,13 @@ public class PlayerController : MonoBehaviour
         if (collidingTrigger.gameObject.tag == "Exit" && evidenceCollected == maxScore){
             endGame();
         }
+
+        // detect if in camera
+        if (collidingTrigger.gameObject.tag == "FovZone")
+        {
+            isDetected = true;
+            detectionStatus.text = "isDetected: " + isDetected;
+        }        
     }
 
     public void endGame(){

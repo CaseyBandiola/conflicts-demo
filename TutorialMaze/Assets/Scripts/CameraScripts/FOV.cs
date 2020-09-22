@@ -10,14 +10,12 @@ public class FOV : MonoBehaviour
     Collider2D[] playerInFov;
     public LayerMask obstacleMask, playerMask;
     public List<Transform> visiblePlayer = new List<Transform>();
-    public Text detectionStatus;
-    private bool isDetected;
 
     void Start()
     {
         obstacleMask = LayerMask.GetMask("Walls");
         playerMask = LayerMask.GetMask("Player");
-        isDetected = false;
+        
     }
     void FixedUpdate()
     {
@@ -50,16 +48,15 @@ public class FOV : MonoBehaviour
         }
 
         // if a player is still inside the fov, the code here will execute
-        if (visiblePlayer.Count == 1)
-        {
-            // player visible
-            isDetected = true;
-        }
-        else
-        {
-            isDetected = false;
-        }
-        detectionStatus.text = "isDetected: " + isDetected;
+        // if (visiblePlayer.Count == 1)
+        // {
+        //     // player visible
+        //     isDetected = true;
+        // }
+        // else
+        // {
+        //     isDetected = false;
+        // }
         //Debug.Log(visiblePlayer.Count);
     }
     public Vector2 DirFromAngle(float angleDeg, bool isGlobal)
@@ -72,4 +69,8 @@ public class FOV : MonoBehaviour
 
         return new Vector2(Mathf.Cos(angleDeg * Mathf.Deg2Rad), Mathf.Sin(angleDeg * Mathf.Deg2Rad));
     }
+
+    // public bool ReturnDetectionStatus(){
+    //     return isDetected;
+    // }
 }
