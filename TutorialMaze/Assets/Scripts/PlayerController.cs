@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private float speed;
     public int evidenceCollected;
     public Text evidenceAmt;
+    public Text playerWon;
+    private int maxScore = 3;
     // Start is called before the first frame update
     void Start(){
         speed = 10.0f;
@@ -64,6 +66,21 @@ public class PlayerController : MonoBehaviour
             addEvidence();
             Destroy(collidingObject.gameObject);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collidingTrigger) {
+        if (collidingTrigger.gameObject.tag == "Exit" && evidenceCollected == maxScore){
+            endGame();
+        }
+    }
+
+    public void endGame(){
+        playerWon.text = "All evidence collected! Press 'R' to restart";
+        setSpeed(0.0f);
+    }
+
+    private void setSpeed(float speed){
+        this.speed = speed;
     }
 
     private void addEvidence(){
