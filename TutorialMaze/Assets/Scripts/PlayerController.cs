@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,15 +11,21 @@ public class PlayerController : MonoBehaviour
     public Text evidenceAmt;
     public Text playerWon;
     private int maxScore = 3;
+    private bool hasWon;
     // Start is called before the first frame update
     void Start(){
         speed = 10.0f;
         evidenceCollected = 0;
+        hasWon = false;
     }
 
     // Update is called once per frame
     void Update(){
         MovePlayer();
+        // if R pressed, restart
+        if ( Input.GetKey(KeyCode.R) && hasWon ) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     private void MovePlayer(){
@@ -77,6 +84,7 @@ public class PlayerController : MonoBehaviour
     public void endGame(){
         playerWon.text = "All evidence collected! Press 'R' to restart";
         setSpeed(0.0f);
+        hasWon = true;
     }
 
     private void setSpeed(float speed){
