@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private float speed;
+    public int evidenceCollected;
+    public Text evidenceAmt;
     // Start is called before the first frame update
     void Start(){
         speed = 10.0f;
+        evidenceCollected = 0;
     }
 
     // Update is called once per frame
@@ -53,5 +57,17 @@ public class PlayerController : MonoBehaviour
                 transform.Translate(0, speed * Time.deltaTime, 0);
             }
         }
+
+        // evidence collision
+        if (collidingObject.gameObject.tag == "Evidence"){
+            // Increment score then destroy object
+            addEvidence();
+            Destroy(collidingObject.gameObject);
+        }
+    }
+
+    private void addEvidence(){
+        evidenceCollected++;
+        evidenceAmt.text = "Evidence collected: " + evidenceCollected;
     }
 }
