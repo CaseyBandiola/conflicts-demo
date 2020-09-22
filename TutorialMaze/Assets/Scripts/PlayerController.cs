@@ -73,6 +73,11 @@ public class PlayerController : MonoBehaviour
             addEvidence();
             Destroy(collidingObject.gameObject);
         }
+
+        // ignore camera collision
+        if( collidingObject.gameObject.tag == "Cameras" ){
+            Physics2D.IgnoreCollision(collidingObject.collider, this.gameObject.GetComponent<Collider2D>());
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collidingTrigger) {
