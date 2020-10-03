@@ -24,3 +24,4 @@ public class BossBarUI : MonoBehaviour
     	gameObject.SetActive(false);
     }
 }
+// 

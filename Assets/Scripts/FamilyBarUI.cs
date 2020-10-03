@@ -24,3 +24,4 @@ public class FamilyBarUI : MonoBehaviour
     	gameObject.SetActive(false);
     }
 }
+// 

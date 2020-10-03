@@ -22,4 +22,4 @@ public class Dialogue : ScriptableObject
     public Dialogue continueDialogue;
     public int familyEffect;
     public int bossEffect;
-}
+}// 

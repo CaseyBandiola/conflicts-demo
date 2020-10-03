@@ -31,6 +31,7 @@ public class DialogueController : MonoBehaviour
     public GameObject bossBar;
     private BossBarUI bossBarUI;
 	
+	//hotdog
 
     void Start()
     {
@@ -55,7 +56,7 @@ public class DialogueController : MonoBehaviour
         familyBarUI.Show();
         bossBarUI.Show();
         familyBarUI.UpdateFill(dialogue.familyEffect);
-        bossBarUI.UpdateFill(dialogue.bossEffect);
+        bossBarUI.UpdateFill(dialogue.bossEffect); 
     }
 
     void Update()
