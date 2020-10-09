@@ -19,6 +19,6 @@ MonoBehaviour:
   - Naghahanap buhay lang ako dito, oh! Bakit ba ang dami niyong reklamo? Aalis na
     nga ako.
   responseOptions: []
-  continueDialogue: {fileID: 0}
-  familyEffect: -30
-  bossEffect: 20
+  continueDialogue: {fileID: 11400000, guid: 03ac671aed6d56d46b3de087322cd82c, type: 2}
+  familyEffect: -20
+  bossEffect: 0
