@@ -13,10 +13,13 @@ public struct Responses{
 [CreateAssetMenu(fileName = "NewDialogue", menuName = "Dialogue")]
 public class Dialogue : ScriptableObject
 {
+	public Sprite background;
 	public Character speakerLeft;
 	public Character speakerRight;
 	[TextArea(2,5)]
     public string[] dialogues;
     public Responses[] responseOptions;
     public Dialogue continueDialogue;
-}
+    public int familyEffect;
+    public int bossEffect;
+}// 

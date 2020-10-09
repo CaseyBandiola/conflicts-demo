@@ -22,22 +22,41 @@ public class DialogueController : MonoBehaviour
     private SpeakerUI speakerUIRight;
 
     private List<string> choicesMade = new List<string>();
+
+    public Image background;
+
+    public GameObject familyBar;
+    private FamilyBarUI familyBarUI;
+
+    public GameObject bossBar;
+    private BossBarUI bossBarUI;
 	
+	//hotdog
 
     void Start()
     {
     	speakerUILeft  = speakerLeft.GetComponent<SpeakerUI>();
         speakerUIRight = speakerRight.GetComponent<SpeakerUI>();
+        familyBarUI = familyBar.GetComponent<FamilyBarUI>();
+        bossBarUI = bossBar.GetComponent<BossBarUI>();
         Initialize();
         index++;
         StartCoroutine(Type());
     }
 
     private void Initialize() {
-        //conversationStarted = true;
         index = -1;
+
         speakerUILeft.Speaker = dialogue.speakerLeft;
         speakerUIRight.Speaker = dialogue.speakerRight;
+
+        background = this.GetComponent<Image>();
+        background.sprite = dialogue.background;
+
+        familyBarUI.Show();
+        bossBarUI.Show();
+        familyBarUI.UpdateFill(dialogue.familyEffect);
+        bossBarUI.UpdateFill(dialogue.bossEffect); 
     }
 
     void Update()
