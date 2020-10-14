@@ -142,6 +142,7 @@ public class PlayerController : MonoBehaviour
         if ( maxSize > 0 ) {
             isDetected = true;
             detectionStatus.text = "isDetected: " + isDetected;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         } else {
             isDetected = false;
             detectionStatus.text = "isDetected: " + isDetected;

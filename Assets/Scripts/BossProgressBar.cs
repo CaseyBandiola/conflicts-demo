@@ -15,7 +15,7 @@ public class BossProgressBar : MonoBehaviour {
     void Start() {
        minimum = -100;
        maximum = 100;
-       current = 0;
+       current = (2 * BossBarUI.current) - 100;
     }
 
     // Update is called once per frame
