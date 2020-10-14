@@ -8,7 +8,7 @@ public static class Loader {
     public enum Scene{
         DialogueScene1,
         TutorialMazeScene,
-        VinceSceneHere,
+        AfterMinigame1,
         FamScreen,
 
     }

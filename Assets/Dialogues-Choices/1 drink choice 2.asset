@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b07c52cd5ce9f4a8b70436ae3bbb6b, type: 3}
+  m_Name: 1 drink choice 2
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 4a292a175a26e8d47a86acb4a17ddc31, type: 3}
+  speakerLeft: {fileID: 11400000, guid: 4ccb15404d15a654ab9e1e60b8b920f5, type: 2}
+  speakerRight: {fileID: 11400000, guid: 0716e486662f1d24592fb8ad8240b997, type: 2}
+  dialogues:
+  - Kailangan kong umuwi agad ngayon, sir.
+  - Hay nako, ang KJ mo naman. Sige, see you tomorrow.
+  responseOptions: []
+  continueDialogue: {fileID: 11400000, guid: df0bb41e56b20fc4ebdc749ba8e05120, type: 2}
+  familyEffect: 20
+  bossEffect: -10

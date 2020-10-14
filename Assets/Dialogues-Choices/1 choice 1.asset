@@ -20,5 +20,5 @@ MonoBehaviour:
     nga ako.
   responseOptions: []
   continueDialogue: {fileID: 11400000, guid: 03ac671aed6d56d46b3de087322cd82c, type: 2}
-  familyEffect: -20
+  familyEffect: -10
   bossEffect: 0

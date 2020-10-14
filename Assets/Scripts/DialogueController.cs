@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueController : MonoBehaviour
 {
 	public Text textDisplay;
 
 	public Dialogue dialogue;
+
+	public string nextScene;
 
 	private int index;
 
@@ -106,7 +109,7 @@ public class DialogueController : MonoBehaviour
 			else{
 				// at the end of this scene, load the maze scene next
 				// textDisplay.text = "end";
-				Loader.Load(Loader.Scene.TutorialMazeScene);
+				SceneManager.LoadScene(nextScene);
 			}
 		}
 	}
