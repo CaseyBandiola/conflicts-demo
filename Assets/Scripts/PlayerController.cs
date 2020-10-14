@@ -34,8 +34,12 @@ public class PlayerController : MonoBehaviour
     void Update(){
         MovePlayer();
         // if R pressed, restart
-        if ( Input.GetKey(KeyCode.R) && hasWon ) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // if ( Input.GetKey(KeyCode.R) && hasWon ) {
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // }
+        // if player has won, load next scene
+        if( hasWon ){
+            Loader.Load(Loader.Scene.VinceSceneHere);
         }
     }
 
@@ -109,7 +113,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void endGame(){
-        playerWon.text = "All evidence collected! Press 'R' to restart";
+        //playerWon.text = "All evidence collected! Press 'R' to restart";
         setSpeed(0.0f);
         hasWon = true;
     }
