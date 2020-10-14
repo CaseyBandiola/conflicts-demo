@@ -24,7 +24,7 @@ public class DialogueController : MonoBehaviour
     private SpeakerUI speakerUILeft;
     private SpeakerUI speakerUIRight;
 
-    private List<string> choicesMade = new List<string>();
+    private static List<string> choicesMade = new List<string>();
 
     public Image background;
 
