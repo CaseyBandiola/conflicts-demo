@@ -104,7 +104,9 @@ public class DialogueController : MonoBehaviour
 				button2.GetComponent<Text>().text = dialogue.responseOptions[1].text;
 			}
 			else{
-				textDisplay.text = "end";
+				// at the end of this scene, load the maze scene next
+				// textDisplay.text = "end";
+				Loader.Load(Loader.Scene.TutorialMazeScene);
 			}
 		}
 	}
