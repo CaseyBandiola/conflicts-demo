@@ -9,9 +9,7 @@ public class SisController : MonoBehaviour {
         "Did not drink dialogue",
     };
     private Dictionary<string, int> requests = new Dictionary<string, int>() {
-        { "art materials", 300},
         { "uniform", 800 },
-        { "shoe repair", 250 },
     };
     private string weeklyDialogue;
     public bool didDrink;
@@ -29,13 +27,16 @@ public class SisController : MonoBehaviour {
         } else {
             weeklyRequest = requests.ElementAt(rqIndex);
         }
+        
+        weeklyRequest = requests.ElementAt(0);
 
         return weeklyRequest;
     }
 
     public string GetDialogue(){
         // sets weekly dialogue if the Player drank or not
-        weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
+        //weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
+        weeklyDialogue = "Pa, kailangan ko ng bagong uniform para sa school. (2 weeks)";
         return weeklyDialogue;
     }
 }

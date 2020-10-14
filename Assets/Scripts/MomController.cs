@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MomController : MonoBehaviour {
     private List<string> dialogue = new List<string>() {
-        "Drink dialogue",
-        "Did not drink dialogue",
+        "Susunod, umuwi ka nang mas maaga o sabihan mo muna ako pag late ka uuwi. Huwag mo kalimutan mga pangangailangan natin sa bahay.",
+        "Kamusta naman trabaho mo? Huwag mo kalimutan mga pangangailangan natin sa bahay.",
     };
     private Dictionary<string, int> requests = new Dictionary<string, int>() { 
         { "clothes", 900}, 
@@ -19,7 +19,7 @@ public class MomController : MonoBehaviour {
     public bool didDrink;
     
     void Start() {
-        didDrink = false;
+        
     }
 
     public KeyValuePair<string, int> GetRequest(){
@@ -36,6 +36,13 @@ public class MomController : MonoBehaviour {
     }
 
     public string GetDialogue(){
+        // checks if player drank
+        string drink = DialogueController.choicesMade[2];
+        if (drink.Equals("Go drinking (Lower Family, Increase Boss)")) {
+            didDrink = true;
+        } else {
+            didDrink = false;
+        }
         // sets weekly dialogue if the Player drank or not
         weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
         return weeklyDialogue;

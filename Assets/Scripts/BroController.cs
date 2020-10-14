@@ -10,9 +10,9 @@ public class BroController : MonoBehaviour
         "Did not drink dialogue",
     };
     private Dictionary<string, int> requests = new Dictionary<string, int>() {
-        { "art materials", 300},
-        { "uniform", 800 },
-        { "shoe repair", 250 },
+        // { "art materials", 300},
+        // { "uniform", 800 },
+        // { "shoe repair", 250 },
     };
     private string weeklyDialogue;
     public bool didDrink;
@@ -36,7 +36,8 @@ public class BroController : MonoBehaviour
 
     public string GetDialogue() {
         // sets weekly dialogue if the Player drank or not
-        weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
+        // weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
+        weeklyDialogue = "May mga isyu sa school pero ok lang ako.";
         return weeklyDialogue;
     }
 }
