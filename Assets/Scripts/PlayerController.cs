@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour
         // }
         // if player has won, load next scene
         if( hasWon ){
-            Loader.Load(Loader.Scene.VinceSceneHere);
+            playerWon.text = "All evidence collected! Press 'Enter' to proceed";
+            if( Input.GetKey(KeyCode.Return) ) Loader.Load(Loader.Scene.VinceSceneHere);
         }
     }
 
@@ -112,7 +113,6 @@ public class PlayerController : MonoBehaviour
     }
 
     public void endGame(){
-        //playerWon.text = "All evidence collected! Press 'R' to restart";
         setSpeed(0.0f);
         hasWon = true;
     }
