@@ -8,6 +8,8 @@ public static class Loader {
     public enum Scene{
         DialogueScene1,
         TutorialMazeScene,
+        VinceSceneHere,
+        FamScreen,
 
     }
     public static void Load(Scene scene){

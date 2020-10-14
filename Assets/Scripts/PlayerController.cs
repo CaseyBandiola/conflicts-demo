@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
         cam1 = GameObject.Find("Camera1");
         cam2 = GameObject.Find("Camera2");
         cameras = new GameObject[2]{ cam1, cam2 };
-        Debug.Log(cameras.ToString());
     }
 
     // Update is called once per frame

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VinceSceneHere.unity
     guid: 19b91d9ab21252745ba2d778e3c82f20
+  - enabled: 1
+    path: Assets/Scenes/FamScreen.unity
+    guid: 2197c9a9392c1db4090a9480b3fea817
   m_configObjects: {}
