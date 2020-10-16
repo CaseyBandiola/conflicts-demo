@@ -80,7 +80,7 @@ public class DialogueController : MonoBehaviour
     IEnumerator Type(){
 		foreach(char letter in dialogue.dialogues[index].ToCharArray()){
 			textDisplay.text += letter;
-			yield return new WaitForSeconds(0.01f);
+			yield return new WaitForSeconds(0.001f);
 		}
 	}
 
