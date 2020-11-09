@@ -102,8 +102,8 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collidingTrigger) {
-        if (collidingTrigger.gameObject.tag == "Exit" && evidenceCollected == maxScore){
-            endGame();
+        if ( collidingTrigger.gameObject.tag == "Exit" && evidenceCollected == maxScore ){
+            endGame(true);
         }
 
         // detect if in camera
@@ -114,9 +114,9 @@ public class PlayerController : MonoBehaviour
         }        
     }
 
-    public void endGame(){
+    public void endGame(bool win){
         setSpeed(0.0f);
-        hasWon = true;
+        hasWon = win;
     }
 
     private void setSpeed(float speed){
