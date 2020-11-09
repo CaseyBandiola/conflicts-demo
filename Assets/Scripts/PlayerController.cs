@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Text playerWon;
     public Text detectionStatus;
     private int maxScore = 3;
+    private int lives;
     private bool hasWon;
     private bool isDetected;
     
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public GameObject cam2;
     // Start is called before the first frame update
     void Start(){
+        lives = 3;
         speed = 10.0f;
         evidenceCollected = 0;
         hasWon = false;
@@ -140,6 +142,7 @@ public class PlayerController : MonoBehaviour
 
         // if any of the cameras see a player, change the UI to know
         if ( maxSize > 0 ) {
+            // do detection checks here
             isDetected = true;
             detectionStatus.text = "isDetected: " + isDetected;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
