@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MoneyHandler : MonoBehaviour {
@@ -31,6 +32,11 @@ public class MoneyHandler : MonoBehaviour {
         momRqButton = momRq.GetComponent<Button>();
         sisRqButton = sisRq.GetComponent<Button>();
         broRqButton = broRq.GetComponent<Button>();
+    }
+
+    void Update() {
+        // code for mouse over check of UI Button
+        Debug.Log(EventSystem.current.IsPointerOverGameObject());
     }
 
     // code for sister's requests
