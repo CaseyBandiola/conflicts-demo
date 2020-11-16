@@ -44,6 +44,9 @@ public class DialogueController : MonoBehaviour
         bossBarUI = bossBar.GetComponent<BossBarUI>();
         Initialize();
         index++;
+        if(dialogue.dialogues[index] == ""){
+        	index++;
+        }
         StartCoroutine(Type());
     }
 
@@ -60,6 +63,7 @@ public class DialogueController : MonoBehaviour
         bossBarUI.Show();
         familyBarUI.UpdateFill(dialogue.familyEffect);
         bossBarUI.UpdateFill(dialogue.bossEffect); 
+
     }
 
     void Update()
@@ -73,7 +77,12 @@ public class DialogueController : MonoBehaviour
     		speakerUIRight.Show();
     	}
         if(textDisplay.text == dialogue.dialogues[index]){
-        	continueButton.SetActive(true);
+        	if(dialogue.dialogues[index] == ""){
+        		continueButton.SetActive(false);
+        	}
+        	else{
+        		continueButton.SetActive(true);
+        	}
         }
     }
 
@@ -98,6 +107,11 @@ public class DialogueController : MonoBehaviour
 			textDisplay.text = "";
 			if(dialogue.continueDialogue != null){
 				ContinueDialogue();
+				if(dialogue.dialogues[index] == ""){
+					index++;
+					continueButton.SetActive(false);
+					StartCoroutine(Type());
+				}
 			}
 			else if(dialogue.responseOptions.Length != 0){
 				index = 0;

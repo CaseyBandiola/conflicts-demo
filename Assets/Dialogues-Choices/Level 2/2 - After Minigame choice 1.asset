@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b07c52cd5ce9f4a8b70436ae3bbb6b, type: 3}
+  m_Name: 2 - After Minigame choice 1
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: e00bfe43239629549a2207e23fae6c1f, type: 3}
+  speakerLeft: {fileID: 11400000, guid: 4ccb15404d15a654ab9e1e60b8b920f5, type: 2}
+  speakerRight: {fileID: 11400000, guid: c806164d025778445ba310b215baed51, type: 2}
+  dialogues:
+  - Honey, nakauiwi na ako.
+  - Oh, Albert. Napa-aga ka ata ngayon?
+  - 'Oo, pinauwi ako nang maaga ng boss ko. '
+  - Tulungan mo naman si Ana sa homework niya. Kanina pa siya humihingi ng tulong
+    sa akin pero marami pa akong ginagawa.
+  - Eh, si Antonio? Anong oras siya uuwi?
+  - Nako, kamakailan lang gabi na yun umuuwi. Hindi nakikinig sa akin kahit snasabihan
+    ko na umuwi nang maaga.
+  responseOptions: []
+  continueDialogue: {fileID: 0}
+  familyEffect: 5
+  bossEffect: 0

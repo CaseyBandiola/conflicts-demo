@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 1e554acf76b7f1a4fb4781c0d43ccbdc
   - enabled: 1
-    path: Assets/Scenes/DialogueScene1.unity
+    path: Assets/Scenes/Level 1/DialogueScene1.unity
     guid: ddda5ac32dffbfd48ac3c63d05f0fa28
   - enabled: 1
-    path: Assets/Scenes/TutorialMazeScene.unity
+    path: Assets/Scenes/Level 1/TutorialMazeScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/AfterMinigame1.unity
+    path: Assets/Scenes/Level 1/AfterMinigame1.unity
     guid: 19b91d9ab21252745ba2d778e3c82f20
   - enabled: 1
     path: Assets/Scenes/FamScreen.unity
