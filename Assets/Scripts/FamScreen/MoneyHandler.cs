@@ -36,7 +36,11 @@ public class MoneyHandler : MonoBehaviour {
 
     void Update() {
         // code for mouse over check of UI Button
-        Debug.Log(EventSystem.current.IsPointerOverGameObject());
+        // if ( EventSystem.current.IsPointerOverGameObject() ) {
+        //     Debug.Log(EventSystem.current.currentSelectedGameObject.name);
+        // }
+        //DetectObject();
+        //Debug.Log(EventSystem.current.IsPointerOverGameObject());
     }
 
     // code for sister's requests
