@@ -8,7 +8,7 @@ public class FamilyBarUI : MonoBehaviour
 	public Image background;
 	public Image mask;
 	public int maximum = 100;
-	public int current = 0;
+	static public int current = 0;
     
     public void UpdateFill(int amount){
     	current += amount;

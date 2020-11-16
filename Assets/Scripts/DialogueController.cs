@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueController : MonoBehaviour
 {
 	public Text textDisplay;
 
 	public Dialogue dialogue;
+
+	public string nextScene;
 
 	private int index;
 
@@ -21,7 +24,7 @@ public class DialogueController : MonoBehaviour
     private SpeakerUI speakerUILeft;
     private SpeakerUI speakerUIRight;
 
-    private List<string> choicesMade = new List<string>();
+    public static List<string> choicesMade = new List<string>();
 
     public Image background;
 
@@ -77,7 +80,7 @@ public class DialogueController : MonoBehaviour
     IEnumerator Type(){
 		foreach(char letter in dialogue.dialogues[index].ToCharArray()){
 			textDisplay.text += letter;
-			yield return new WaitForSeconds(0.01f);
+			yield return new WaitForSeconds(0.001f);
 		}
 	}
 
@@ -104,7 +107,9 @@ public class DialogueController : MonoBehaviour
 				button2.GetComponent<Text>().text = dialogue.responseOptions[1].text;
 			}
 			else{
-				textDisplay.text = "end";
+				// at the end of this scene, load the maze scene next
+				// textDisplay.text = "end";
+				SceneManager.LoadScene(nextScene);
 			}
 		}
 	}
