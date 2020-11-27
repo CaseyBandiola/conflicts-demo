@@ -37,9 +37,11 @@ public class PlayerController : MonoBehaviour
         //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         // }
         // if player has won, load next scene
+
+        // add fail condition and Loader.Scene.AfterMinigame1Fail
         if( hasWon ){
             playerWon.text = "All evidence collected! Press 'Enter' to proceed";
-            if( Input.GetKey(KeyCode.Return) ) Loader.Load(Loader.Scene.AfterMinigame1);
+            if( Input.GetKey(KeyCode.Return) ) Loader.Load(Loader.Scene.AfterMinigame1Pass);
         }
     }
 
