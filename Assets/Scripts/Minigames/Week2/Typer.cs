@@ -25,7 +25,7 @@ public class Typer : MonoBehaviour {
     }
 
     // Updates remaining word tracked by Typer
-    private SetRemainingWord(string s){
+    private void SetRemainingWord(string s){
         // update remaining word
         remainingWord = s;
         wordOutput.text = remainingWord;
