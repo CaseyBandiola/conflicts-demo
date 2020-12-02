@@ -36,6 +36,10 @@ public class Typer : MonoBehaviour {
             // tracks keys pressed this frame
             string keysPressed = Input.inputString;
 
+            // ensures that only one letter is read per frame, if ever 2 keys are pressed at the exact same frame
+            if( keysPressed.Length == 1 ){
+                EnterLetter(keysPressed);
+            }
         }
     }
 
