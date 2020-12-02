@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Typer : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+public class Typer : MonoBehaviour {
+    public Text wordOutput = null;
+
+    private string remainingWord = string.Empty;
+    private string currWord = string.Empty;
+
+    private void Start() {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void Update() {
         
     }
 }
