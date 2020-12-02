@@ -24,7 +24,9 @@ public class Typer : MonoBehaviour {
         SetRemainingWord(currWord);
     }
 
+    // Updates remaining word tracked by Typer
     private SetRemainingWord(string s){
-
+        // update remaining word
+        remainingWord = s;
     }
 }
