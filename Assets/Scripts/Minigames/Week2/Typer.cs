@@ -7,7 +7,7 @@ public class Typer : MonoBehaviour {
     public Text wordOutput = null;
 
     private string remainingWord = string.Empty;
-    private string currWord = "Test";
+    private string currWord = "test";
 
     private void Start() {
         SetCurrentWord();
@@ -44,18 +44,28 @@ public class Typer : MonoBehaviour {
     }
 
     private void EnterLetter(string letter){
+        if( IsCorrectLetter(letter) ){
+            RemoveLetter();
 
+            if( IsWordComplete() ){
+                SetCurrentWord();
+            }
+        }
     }
     
     private bool IsCorrectLetter(string letter){
-        return false;
+        // is the letter of word we're checking the first one
+        return remainingWord.IndexOf(letter) == 0;
     }
 
     private void RemoveLetter(){
-
+        // removes first char from string
+        string newString = remainingWord.Remove(0,1);
+        SetRemainingWord(newString);
     }
 
     private bool IsWordComplete(){
-        return false;
+        // check if remaining word still has chars in it
+        return remainingWord.Length == 0;
     }
 }
