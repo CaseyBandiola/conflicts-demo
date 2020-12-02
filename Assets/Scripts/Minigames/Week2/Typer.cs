@@ -14,7 +14,7 @@ public class Typer : MonoBehaviour {
     }
 
     private void Update() {
-        
+        CheckInput();
     }
 
     // Sets the current word in the screen
@@ -28,5 +28,30 @@ public class Typer : MonoBehaviour {
     private SetRemainingWord(string s){
         // update remaining word
         remainingWord = s;
+        wordOutput.text = remainingWord;
+    }
+
+    private void CheckInput(){
+        if( Input.anyKeyDown ){
+            // tracks keys pressed this frame
+            string keysPressed = Input.inputString;
+
+        }
+    }
+
+    private void EnterLetter(string letter){
+
+    }
+    
+    private bool IsCorrectLetter(string letter){
+        return false;
+    }
+
+    private void RemoveLetter(){
+
+    }
+
+    private bool IsWordComplete(){
+        return false;
     }
 }
