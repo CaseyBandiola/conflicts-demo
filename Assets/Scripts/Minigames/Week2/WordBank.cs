@@ -48,7 +48,7 @@ public class WordBank : MonoBehaviour
             // remove word from working words
             workingWords.Remove(newWord);
         }
-
+        
         return newWord;
     }
 }

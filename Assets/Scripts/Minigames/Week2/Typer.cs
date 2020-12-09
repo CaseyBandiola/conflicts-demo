@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Typer : MonoBehaviour {
+    public WordBank wordbank = null;
     public Text wordOutput = null;
 
     private string remainingWord = string.Empty;
-    private string currWord = "test";
+    private string currWord = string.Empty;
 
     private void Start() {
         SetCurrentWord();
@@ -20,6 +21,7 @@ public class Typer : MonoBehaviour {
     // Sets the current word in the screen
     private void SetCurrentWord(){
         // Get word from word bank
+        currWord = wordbank.GetWord();
         // Update remaining word
         SetRemainingWord(currWord);
     }
