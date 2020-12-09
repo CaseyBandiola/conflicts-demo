@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class WordBank : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private List<string> originalWords = new List<string>()
     {
-        
+        "kommunista", "target", "rebelde", "nanlaban", "adik", "instigator", "nationalista", "oligarkiya",
+    };
+
+    private List<string> workingWords = new List<string>();
+
+    private void Awake(){
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Shuffle(List<string> list){
+
+    }
+
+    private void ConvertToLower(List<string> list){
+
+    }
+
+    public string GetWord(){
+        return "";
     }
 }
