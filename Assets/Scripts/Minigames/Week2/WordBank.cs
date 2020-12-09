@@ -39,6 +39,16 @@ public class WordBank : MonoBehaviour
     }
 
     public string GetWord(){
-        return "";
+        string newWord = string.Empty;
+
+        // as long as we have working words
+        if( workingWords.Count != 0 ){
+            // get last word in the list
+            newWord = workingWords.Last();
+            // remove word from working words
+            workingWords.Remove(newWord);
+        }
+
+        return newWord;
     }
 }
