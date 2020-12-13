@@ -589,6 +589,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490016368}
   m_CullTransparentMesh: 0
+--- !u!1 &1567636470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3672574608287979294, guid: c1bcffb527b53c4468c79d79999fcb37,
+    type: 3}
+  m_PrefabInstance: {fileID: 3672574606891522482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1567636471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567636470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295e6f75bb0440041b5ef1d7b0a5118a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerSlider: {fileID: 978958636}
+  timerText: {fileID: 1685600807}
+  gameTime: 10
+  time: 0
 --- !u!1 &1685600805
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +807,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786428403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 295e6f75bb0440041b5ef1d7b0a5118a, type: 3}
   m_Name: 
@@ -793,6 +815,7 @@ MonoBehaviour:
   timerSlider: {fileID: 978958636}
   timerText: {fileID: 1685600807}
   gameTime: 10
+  time: 0
 --- !u!1001 &3672574606891522482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -870,6 +893,11 @@ PrefabInstance:
       propertyPath: wordbank
       value: 
       objectReference: {fileID: 852085965}
+    - target: {fileID: 9130397617880368556, guid: c1bcffb527b53c4468c79d79999fcb37,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1bcffb527b53c4468c79d79999fcb37, type: 3}
 --- !u!1001 &5330538100990598541

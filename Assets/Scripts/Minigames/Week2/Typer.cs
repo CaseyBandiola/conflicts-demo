@@ -11,10 +11,12 @@ public class Typer : MonoBehaviour {
     private string currWord = string.Empty;
 
     private void Start() {
+        // set a word to type
         SetCurrentWord();
     }
 
     private void Update() {
+        // checks keyboard input
         CheckInput();
     }
 
@@ -49,7 +51,9 @@ public class Typer : MonoBehaviour {
         if( IsCorrectLetter(letter) ){
             RemoveLetter();
 
+            // if word is done, look for a new word, and add time
             if( IsWordComplete() ){
+                Timer.AddTime();
                 SetCurrentWord();
             }
         }

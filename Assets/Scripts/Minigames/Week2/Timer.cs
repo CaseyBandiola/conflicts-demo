@@ -8,13 +8,14 @@ public class Timer : MonoBehaviour {
     public Text timerText;
     
     public float gameTime;
-    public float time;
+    public static float time;
 
     private bool stopTimer;
 
     void Start() {
         // how much time there is in the game
         gameTime = 10.0f;
+        time = gameTime;
 
         stopTimer = false;
         timerSlider.maxValue = gameTime;
@@ -22,12 +23,14 @@ public class Timer : MonoBehaviour {
     }
 
     void Update() {
-        time = gameTime - Time.time;
+        ReduceTime();
         
         // old text formatting
         // int minutes = Mathf.FloorToInt(time / 60);
         // int seconds = Mathf.FloorToInt(time-minutes * 60f);        
         // string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+        timerText.text = time.ToString("0.0");
+        timerSlider.value = time;
 
         if( time <= 0 ){
             stopTimer = true;
@@ -35,8 +38,7 @@ public class Timer : MonoBehaviour {
         }
 
         if( !stopTimer ){
-            timerText.text = time.ToString("0.0");
-            timerSlider.value = time;
+            
         }
     }
 
@@ -44,7 +46,11 @@ public class Timer : MonoBehaviour {
         return stopTimer;
     }
 
-    public void AddTime(){
+    public static void AddTime(){
         time += 0.5f;
+    }
+
+    void ReduceTime(){
+        time -= 1 * Time.deltaTime;
     }
 }
