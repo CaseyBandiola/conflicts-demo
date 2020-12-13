@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour {
     void Start() {
         stopTimer = false;
         timerSlider.maxValue = gameTime;
-        timerslider.value = gameTime;    
+        timerSlider.value = gameTime;    
     }
 
     // Update is called once per frame
