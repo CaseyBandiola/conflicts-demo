@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour {
 
         if( time <= 0 ){
             stopTimer = true;
+            time = 0f;
         }
 
         if( !stopTimer ){
