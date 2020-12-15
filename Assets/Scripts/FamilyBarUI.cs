@@ -23,5 +23,9 @@ public class FamilyBarUI : MonoBehaviour
     public void Hide(){
     	gameObject.SetActive(false);
     }
+
+    public int showCurrent(){
+        return current;
+    }
 }
 // 

@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+using System;
+using System.Text;
+
 public class DialogueController : MonoBehaviour
 {
 	public Text textDisplay;
@@ -48,6 +51,14 @@ public class DialogueController : MonoBehaviour
         	index++;
         }
         StartCoroutine(Type());
+
+        /*SaveObject saveObject = new SaveObject{
+        	choices = choicesMade,
+        	familyBarSave = familyBarUI.showCurrent(),
+        	bossBarSave = bossBarUI.showCurrent(),
+        };
+        string json = JsonUtility.ToJson(saveObject);
+        Debug.Log(json);*/
     }
 
     private void Initialize() {
@@ -63,6 +74,14 @@ public class DialogueController : MonoBehaviour
         bossBarUI.Show();
         familyBarUI.UpdateFill(dialogue.familyEffect);
         bossBarUI.UpdateFill(dialogue.bossEffect); 
+
+        SaveObject saveObject = new SaveObject{
+        	choices = choicesMade,
+        	familyBarSave = familyBarUI.showCurrent(),
+        	bossBarSave = bossBarUI.showCurrent(),
+        };
+        string json = JsonUtility.ToJson(saveObject);
+        Debug.Log(json);
 
     }
 
@@ -123,6 +142,7 @@ public class DialogueController : MonoBehaviour
 			else{
 				// at the end of this scene, load the maze scene next
 				// textDisplay.text = "end";
+				SendGoogle();
 				SceneManager.LoadScene(nextScene);
 			}
 		}
@@ -149,5 +169,28 @@ public class DialogueController : MonoBehaviour
 		button2.SetActive(false);
 		Initialize();
 		NextSentence();
+	}
+
+	private class SaveObject {
+		public List<string> choices;
+		public int familyBarSave;
+		public int bossBarSave;
+	}
+
+	[SerializeField]
+	private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBCMRmRBrgMyQ_tJNqy0VnkSwvmRXloPT6KedTQM6VlP0d7Q/formResponse";
+	IEnumerator Post(List<string> choices, int familySatisfaction, int bossSatisfaction){
+		string allChoices = String.Join(", ", choices.ToArray());
+		WWWForm form = new WWWForm();
+		form.AddField("entry.655487196", allChoices);
+		form.AddField("entry.1411661847", familySatisfaction);
+		form.AddField("entry.747959956", bossSatisfaction);
+		byte[] rawData = form.data;
+		WWW www = new WWW(BASE_URL, rawData);
+		yield return www;
+	}
+
+	public void SendGoogle(){
+		StartCoroutine(Post(choicesMade, familyBarUI.showCurrent(), bossBarUI.showCurrent()));
 	}
 }
