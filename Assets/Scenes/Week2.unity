@@ -1083,6 +1083,7 @@ MonoBehaviour:
   broBuyButton: {fileID: 1374541162}
   broRqImg: {fileID: 1717710867}
   bro: {fileID: 2091499545}
+  money: {fileID: 1973579254}
 --- !u!1 &576188186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1167,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1973579254}
+      - m_Target: {fileID: 0}
         m_MethodName: BuyMomRequest
         m_Mode: 1
         m_Arguments:
@@ -2043,7 +2044,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1973579254}
+      - m_Target: {fileID: 0}
         m_MethodName: BuySisRequest
         m_Mode: 1
         m_Arguments:
@@ -2679,7 +2680,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1973579254}
+      - m_Target: {fileID: 0}
         m_MethodName: BuyBroRequest
         m_Mode: 1
         m_Arguments:
@@ -3552,11 +3553,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1973579252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe986c4e494574a4bac3abff6cd8c3ee, type: 3}
+  m_Script: {fileID: 11500000, guid: dadbe79d5845eb344a6ce75434fb9926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moneyUI: {fileID: 1693458967}
-  endWeek: {fileID: 0}
+  endWeek: {fileID: 547200103}
   momRq: {fileID: 576188186}
   momBtnStar: {fileID: 1955910299}
   sisRq: {fileID: 1031946787}

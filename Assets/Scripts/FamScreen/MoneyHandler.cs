@@ -23,10 +23,10 @@ public class MoneyHandler : MonoBehaviour {
     public Image broBtnStar;
     private Button broRqButton;
 
-    private int money;
+    public static int money;
 
     void Start() {
-        money = 4000;
+        money = 3000;
         moneyUI.text = "₱ " + money.ToString();
         
         momRqButton = momRq.GetComponent<Button>();
@@ -41,6 +41,7 @@ public class MoneyHandler : MonoBehaviour {
         // }
         //DetectObject();
         //Debug.Log(EventSystem.current.IsPointerOverGameObject());
+        moneyUI.text = "₱ " + money.ToString();
     }
 
     // code for sister's requests
@@ -80,5 +81,10 @@ public class MoneyHandler : MonoBehaviour {
         broRqButton.interactable = false;
         broRq.GetComponentInChildren<Text>().text = "BOUGHT";
         broBtnStar.enabled = false;
+    }
+
+    public void AddMoney(int amt){
+        money += amt;
+        moneyUI.text = "₱ " + money.ToString();
     }
 }

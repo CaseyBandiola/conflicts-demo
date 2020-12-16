@@ -32,19 +32,67 @@ public class Week2_fam : MonoBehaviour {
     // Request prices
     private int momRqPrice;
     private int sisRqPrice;
-    private int broRqPrice;    
+    private int broRqPrice;   
+
+    // money handler
+    public MoneyHandler2 money; 
     void Start() {
         weekNum = 2;
         week.text = "Week " + weekNum;
-
+        money.AddMoney(2500);
         // UpdateDialogue();
-        // UpdateRequest();
+        UpdateRequest();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpdateRequest() {
+        // Mom requests
+        KeyValuePair<string, int> mrq = mom.GetRequest();
+        string mrqText = mrq.Key.Equals("None") ? "Request: " + mrq.Key : "Request: " + mrq.Key + " - ₱ " + mrq.Value.ToString();
+        momRequest.text = mrqText;
+        momRqPrice = mrq.Value;
+        // Hide button if no request avaialable for purchase
+        if (mrq.Key.Equals("None")){
+            momBuyButton.SetActive(false);
+        } else {
+            momBuyButton.SetActive(true);
+        }
+
+        // Sis requests
+        KeyValuePair<string, int> srq = sis.GetRequest();
+        string srqText = srq.Key.Equals("None") ? "Request: " + srq.Key : "Request: " + srq.Key + " - ₱ " + srq.Value.ToString();
+        sisRequest.text = srqText;
+        sisRqPrice = srq.Value;
+        // Hide button if no request avaialable for purchase
+        if (srq.Key.Equals("None")) {
+            sisBuyButton.SetActive(false);
+        } else {
+            sisBuyButton.SetActive(true);
+        }
+
+        // Bro requests
+        KeyValuePair<string, int> brq = bro.GetRequest();
+        string brqText = brq.Key.Equals("None") ? "Request: " + brq.Key : "Request: " + brq.Key + " - ₱ " + brq.Value.ToString();
+        broRequest.text = brqText;
+        broRqPrice = brq.Value;
+        // Hide button if no request avaialable for purchase
+        if (brq.Key.Equals("None")) {
+            broBuyButton.SetActive(false);
+        } else {
+            broBuyButton.SetActive(true);
+        }
+    }
+
+    public int GetMomRqPrice() {
+        return momRqPrice;
+    }
+
+    public int GetSisRqPrice() {
+        return sisRqPrice;
+    }
+
+    public int GetBroRqPrice() {
+        return broRqPrice;
     }
 
     public void EndWeekPressed(){
