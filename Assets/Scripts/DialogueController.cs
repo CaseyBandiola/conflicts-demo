@@ -37,10 +37,28 @@ public class DialogueController : MonoBehaviour
     public GameObject bossBar;
     private BossBarUI bossBarUI;
 	
+	//private GameObject user;
+	//private InitialSurvey user;
 	//hotdog
+
+	new public static string name;
+	public static string age;
+	public static string sex;
+	public static string univ;
+	public static string year;
+	public static string ha;
+	public static string vn;
 
     void Start()
     {
+    	//user = userDetails.GetComponent<InitialSurvey>();
+    	name = InitialSurvey.name;
+    	age = InitialSurvey.age;
+		sex = InitialSurvey.sex;
+		univ = InitialSurvey.univ;
+		year = InitialSurvey.year;
+		ha = InitialSurvey.ha;
+		vn = InitialSurvey.vn;
     	speakerUILeft  = speakerLeft.GetComponent<SpeakerUI>();
         speakerUIRight = speakerRight.GetComponent<SpeakerUI>();
         familyBarUI = familyBar.GetComponent<FamilyBarUI>();
@@ -51,14 +69,6 @@ public class DialogueController : MonoBehaviour
         	index++;
         }
         StartCoroutine(Type());
-
-        /*SaveObject saveObject = new SaveObject{
-        	choices = choicesMade,
-        	familyBarSave = familyBarUI.showCurrent(),
-        	bossBarSave = bossBarUI.showCurrent(),
-        };
-        string json = JsonUtility.ToJson(saveObject);
-        Debug.Log(json);*/
     }
 
     private void Initialize() {
@@ -75,13 +85,13 @@ public class DialogueController : MonoBehaviour
         familyBarUI.UpdateFill(dialogue.familyEffect);
         bossBarUI.UpdateFill(dialogue.bossEffect); 
 
-        SaveObject saveObject = new SaveObject{
+        /*SaveObject saveObject = new SaveObject{
         	choices = choicesMade,
         	familyBarSave = familyBarUI.showCurrent(),
         	bossBarSave = bossBarUI.showCurrent(),
         };
         string json = JsonUtility.ToJson(saveObject);
-        Debug.Log(json);
+        Debug.Log(json);*/
 
     }
 
@@ -142,7 +152,13 @@ public class DialogueController : MonoBehaviour
 			else{
 				// at the end of this scene, load the maze scene next
 				// textDisplay.text = "end";
-				SendGoogle();
+
+				// WHERE EQUALS IS THE LAST SCENE OF THE GAME AND WHERE IT SENDS
+				// TO G SHEETS
+				if(nextScene.Equals("TutorialMazeScene")){
+					SendGoogle();
+				}
+				// WHERE TO LOAD MINIGAME AND/OR FAMILY SCREEN
 				SceneManager.LoadScene(nextScene);
 			}
 		}
@@ -171,26 +187,45 @@ public class DialogueController : MonoBehaviour
 		NextSentence();
 	}
 
-	private class SaveObject {
+	/*private class SaveObject {
 		public List<string> choices;
 		public int familyBarSave;
 		public int bossBarSave;
-	}
+	}*/
 
 	[SerializeField]
-	private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBCMRmRBrgMyQ_tJNqy0VnkSwvmRXloPT6KedTQM6VlP0d7Q/formResponse";
-	IEnumerator Post(List<string> choices, int familySatisfaction, int bossSatisfaction){
+	private string BASE_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQnA1UwxibKveACIgILgp53tt7fylLHmty6ZGHzBm_ibJEFg/formResponse";
+	IEnumerator Post(string name, string age, string sex, string univ, string year, string ha, string vn, List<string> choices, int familySatisfaction, int bossSatisfaction){
 		string allChoices = String.Join(", ", choices.ToArray());
 		WWWForm form = new WWWForm();
-		form.AddField("entry.655487196", allChoices);
-		form.AddField("entry.1411661847", familySatisfaction);
-		form.AddField("entry.747959956", bossSatisfaction);
+		form.AddField("entry.1067888008", name);
+		form.AddField("entry.41188139", age);
+		form.AddField("entry.489504437", sex);
+		form.AddField("entry.1479408121", univ);
+		form.AddField("entry.1157722575", year);
+		form.AddField("entry.728165496", ha);
+		form.AddField("entry.1405489059", vn);
+		form.AddField("entry.2108200016", allChoices);
+		form.AddField("entry.1902930186", familySatisfaction);
+		form.AddField("entry.641995644", bossSatisfaction);
 		byte[] rawData = form.data;
 		WWW www = new WWW(BASE_URL, rawData);
 		yield return www;
 	}
 
 	public void SendGoogle(){
-		StartCoroutine(Post(choicesMade, familyBarUI.showCurrent(), bossBarUI.showCurrent()));
+		StartCoroutine(Post(
+			name,
+			age,
+			sex,
+			univ,
+			year,
+			ha,
+			vn,
+			choicesMade, 
+			familyBarUI.showCurrent(), 
+			bossBarUI.showCurrent()
+			)
+		);
 	}
 }

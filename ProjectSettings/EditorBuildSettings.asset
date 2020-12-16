@@ -20,4 +20,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FamScreen.unity
     guid: 2197c9a9392c1db4090a9480b3fea817
+  - enabled: 1
+    path: Assets/Scenes/Level 1/AfterMinigame1Fail.unity
+    guid: f855798835ddf664a889ff819712268d
+  - enabled: 1
+    path: Assets/Scenes/Level 2/AfterMinigame2 - Fail.unity
+    guid: 924e96a3210cde648ad611609743492a
+  - enabled: 1
+    path: Assets/Scenes/Level 2/AfterMinigame2 - Pass.unity
+    guid: 3049c2a660b16fe468abb516fdb6674e
+  - enabled: 1
+    path: Assets/Scenes/Level 2/DialogueScene2.unity
+    guid: 28d7392b14c6efe4aa8cfea5431cb222
+  - enabled: 1
+    path: Assets/Scenes/InitialSurvey.unity
+    guid: 9cba27acc7c413842933b21e36bfc1c3
   m_configObjects: {}

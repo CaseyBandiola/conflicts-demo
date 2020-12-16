@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Wife
   m_EditorClassIdentifier: 
   fullName: Maria
-  portrait: {fileID: 21300000, guid: 79e12b2a21e75c94593a0f0aa3f6d42e, type: 3}
+  portrait: {fileID: 21300000, guid: 109d2f66767d6d041a297bb3091c28e4, type: 3}

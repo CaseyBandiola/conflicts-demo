@@ -14,6 +14,7 @@ public static class Loader {
         AfterMinigame2Pass,
         AfterMinigame2Fail,
         FamScreen,
+        InitialSurvey,
 
     }
     public static void Load(Scene scene){

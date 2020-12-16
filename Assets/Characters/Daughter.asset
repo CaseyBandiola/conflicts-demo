@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Daughter
   m_EditorClassIdentifier: 
   fullName: Ana
-  portrait: {fileID: 21300000, guid: 1c987eccf67ad8c45b47a91e4f24528a, type: 3}
+  portrait: {fileID: 21300000, guid: ffcb58e1d4def6946a3483e091234269, type: 3}

@@ -430,7 +430,6 @@ GameObject:
   - component: {fileID: 233594374}
   - component: {fileID: 233594373}
   - component: {fileID: 233594372}
-  - component: {fileID: 233594375}
   m_Layer: 5
   m_Name: Scene
   m_TagString: Untagged
@@ -484,6 +483,7 @@ MonoBehaviour:
   background: {fileID: 770209011}
   familyBar: {fileID: 1155405364}
   bossBar: {fileID: 1312392391}
+  BASE_URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQnA1UwxibKveACIgILgp53tt7fylLHmty6ZGHzBm_ibJEFg/formResponse
 --- !u!114 &233594373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,24 +521,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233594370}
   m_CullTransparentMesh: 0
---- !u!114 &233594375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233594370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d4c5addab115443ad0a11f0c00736d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userData:
-    userDetails: []
-    userChoices: []
-    quest1: []
-    quest2: []
-    sValues: []
 --- !u!1 &276476053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,6 +2409,7 @@ MonoBehaviour:
   background: {fileID: 0}
   familyBar: {fileID: 0}
   bossBar: {fileID: 0}
+  BASE_URL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBCMRmRBrgMyQ_tJNqy0VnkSwvmRXloPT6KedTQM6VlP0d7Q/formResponse
 --- !u!4 &2003121568
 Transform:
   m_ObjectHideFlags: 0

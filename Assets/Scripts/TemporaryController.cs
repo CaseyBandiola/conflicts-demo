@@ -8,6 +8,6 @@ public class TemporaryController : MonoBehaviour
 	public GameObject startButton;
 
     public void NextScene(){
-        Loader.Load(Loader.Scene.DialogueScene1);
+        Loader.Load(Loader.Scene.InitialSurvey);
     }
 }
