@@ -37,7 +37,7 @@ public class MomController : MonoBehaviour {
 
     public string GetDialogue(){
         // checks if player drank
-        string drink = DialogueController.choicesMade[2];
+        string drink = "test";//DialogueController.choicesMade[2];
         // string drink = "test";
         if (drink.Equals("Go drinking (Lower Family, Increase Boss)")) {
             didDrink = true;

@@ -121,65 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &54969290
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 54969292}
-  - component: {fileID: 54969291}
-  m_Layer: 0
-  m_Name: ButtonHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &54969291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54969290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25388bb0848cc0d4580e3d20794ad3ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  week: {fileID: 1122291229}
-  momDialogue: {fileID: 1217089156}
-  momRequest: {fileID: 369163520}
-  momBuyButton: {fileID: 576188186}
-  momRqImg: {fileID: 1955910299}
-  mom: {fileID: 1248617279}
-  sisDialogue: {fileID: 1998176240}
-  sisRequest: {fileID: 1890688871}
-  sisBuyButton: {fileID: 1031946787}
-  sisRqImg: {fileID: 1972114409}
-  sis: {fileID: 1004963300}
-  broDialogue: {fileID: 397830017}
-  broRequest: {fileID: 643608545}
-  broBuyButton: {fileID: 1374541162}
-  broRqImg: {fileID: 1717710867}
-  bro: {fileID: 2091499545}
---- !u!4 &54969292
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54969290}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 416.36823, y: 166.83015, z: -41.529163}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 917576028}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &69428621
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 917576028}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &120141731
 MonoBehaviour:
@@ -363,7 +304,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 54969291}
+      - m_Target: {fileID: 547200103}
         m_MethodName: EndWeekPressed
         m_Mode: 1
         m_Arguments:
@@ -373,7 +314,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
 --- !u!114 &167171971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,6 +1024,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474883298}
   m_CullTransparentMesh: 0
+--- !u!1 &547200101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547200102}
+  - component: {fileID: 547200103}
+  m_Layer: 0
+  m_Name: Week2Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &547200102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547200101}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 429.5, y: 472.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 917576028}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547200103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547200101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94a42566578d6146b55ebe691d33320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  week: {fileID: 1122291229}
+  momDialogue: {fileID: 1217089156}
+  momRequest: {fileID: 369163520}
+  momBuyButton: {fileID: 576188186}
+  momRqImg: {fileID: 1955910299}
+  mom: {fileID: 1248617279}
+  sisDialogue: {fileID: 1998176240}
+  sisRequest: {fileID: 1890688871}
+  sisBuyButton: {fileID: 1031946787}
+  sisRqImg: {fileID: 1972114409}
+  sis: {fileID: 1004963300}
+  broDialogue: {fileID: 397830017}
+  broRequest: {fileID: 643608545}
+  broBuyButton: {fileID: 1374541162}
+  broRqImg: {fileID: 1717710867}
+  bro: {fileID: 2091499545}
 --- !u!1 &576188186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,10 +1775,10 @@ Transform:
   m_Children:
   - {fileID: 1248617280}
   - {fileID: 1004963301}
-  - {fileID: 54969292}
   - {fileID: 1973579253}
   - {fileID: 2091499544}
   - {fileID: 120141730}
+  - {fileID: 547200102}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3541,7 +3541,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 917576028}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1973579254
 MonoBehaviour:
@@ -3556,7 +3556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyUI: {fileID: 1693458967}
-  endWeek: {fileID: 54969291}
+  endWeek: {fileID: 0}
   momRq: {fileID: 576188186}
   momBtnStar: {fileID: 1955910299}
   sisRq: {fileID: 1031946787}
@@ -3751,7 +3751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 917576028}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2091499545
 MonoBehaviour:
