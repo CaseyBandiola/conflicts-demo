@@ -51,4 +51,8 @@ public class WordBank : MonoBehaviour
         
         return newWord;
     }
+
+    public int WordsLeft(){
+        return workingWords.Count;
+    }
 }
