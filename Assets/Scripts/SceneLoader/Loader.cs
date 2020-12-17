@@ -10,6 +10,7 @@ public static class Loader {
         TutorialMazeScene,
         AfterMinigame1,
         FamScreen,
+        Week2,
 
     }
     public static void Load(Scene scene){
