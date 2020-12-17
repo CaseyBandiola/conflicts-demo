@@ -35,19 +35,19 @@ public class Week2_fam : MonoBehaviour {
     private int broRqPrice;   
 
     // money handler
-    public MoneyHandler2 money; 
+    public MoneyHandler2 money;
     void Start() {
         weekNum = 2;
         week.text = "Week " + weekNum;
         money.AddMoney(2500);
-        // UpdateDialogue();
+        UpdateDialogue();
         UpdateRequest();
     }
 
     // Update is called once per frame
     public void UpdateRequest() {
         // Mom requests
-        KeyValuePair<string, int> mrq = mom.GetRequest();
+        KeyValuePair<string, int> mrq = mom.GetRequest2();
         string mrqText = mrq.Key.Equals("None") ? "Request: " + mrq.Key : "Request: " + mrq.Key + " - ₱ " + mrq.Value.ToString();
         momRequest.text = mrqText;
         momRqPrice = mrq.Value;
@@ -81,6 +81,12 @@ public class Week2_fam : MonoBehaviour {
         } else {
             broBuyButton.SetActive(true);
         }
+    }
+
+    public void UpdateDialogue(){
+        momDialogue.text = mom.GetDialogue2();
+        sisDialogue.text = sis.GetDialogue2();
+        broDialogue.text = bro.GetDialogue2();
     }
 
     public int GetMomRqPrice() {

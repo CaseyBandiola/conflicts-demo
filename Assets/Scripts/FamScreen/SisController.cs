@@ -9,7 +9,7 @@ public class SisController : MonoBehaviour {
         "Did not drink dialogue",
     };
     private Dictionary<string, int> requests = new Dictionary<string, int>() {
-        { "uniform", 800 },
+        { "uniform", 2500 },
     };
     private string weeklyDialogue;
     public bool didDrink;
@@ -37,6 +37,13 @@ public class SisController : MonoBehaviour {
         // sets weekly dialogue if the Player drank or not
         //weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
         weeklyDialogue = "Pa, kailangan ko ng bagong uniform para sa school. (2 weeks)";
+        return weeklyDialogue;
+    }
+
+    public string GetDialogue2(){
+        // sets weekly dialogue if the Player drank or not
+        //weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
+        weeklyDialogue = "Pa, kailangan ko ng bagong uniform para sa school. (1 week)";
         return weeklyDialogue;
     }
 }

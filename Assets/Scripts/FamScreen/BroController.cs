@@ -40,4 +40,11 @@ public class BroController : MonoBehaviour
         weeklyDialogue = "May mga isyu sa school pero ok lang ako.";
         return weeklyDialogue;
     }
+
+    public string GetDialogue2() {
+        // sets weekly dialogue if the Player drank or not
+        // weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
+        weeklyDialogue = "Narinig ko sa aking mga guro na kakasuhan daw ng gobyerno ang mga nagrarally.";
+        return weeklyDialogue;
+    }
 }

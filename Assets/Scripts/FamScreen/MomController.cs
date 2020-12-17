@@ -14,6 +14,7 @@ public class MomController : MonoBehaviour {
         { "water", 700 }, 
         { "school supplies", 1250 }, 
         { "electricity bill", 4000 } ,
+        { "groceries", 3000 },
     };
     private string weeklyDialogue;
     public bool didDrink;
@@ -35,6 +36,20 @@ public class MomController : MonoBehaviour {
         return weeklyRequest;
     }
 
+    public KeyValuePair<string, int> GetRequest2(){
+        // random request every week
+        KeyValuePair<string, int> weeklyRequest;
+        // int rqIndex = Random.Range(0, requests.Count+1);
+        // if( rqIndex == requests.Count ){
+        //     weeklyRequest = new KeyValuePair<string, int>("None",0);
+        // } else {
+        //     weeklyRequest = requests.ElementAt(rqIndex);
+        // }
+        weeklyRequest = requests.ElementAt(5);
+
+        return weeklyRequest;
+    }
+
     public string GetDialogue(){
         // checks if player drank
         string drink = "test";//DialogueController.choicesMade[2];
@@ -46,6 +61,13 @@ public class MomController : MonoBehaviour {
         }
         // sets weekly dialogue if the Player drank or not
         weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
+        return weeklyDialogue;
+    }
+
+    public string GetDialogue2(){
+        // sets weekly dialogue if the Player drank or not
+        //weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
+        weeklyDialogue = "Kailangan ko nang pumunta sa palengke at grocery para sa bahay. (P3,000 - due now)";
         return weeklyDialogue;
     }
 }

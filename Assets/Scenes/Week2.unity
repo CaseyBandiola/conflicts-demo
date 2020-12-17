@@ -763,7 +763,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7aaedfb4b92f7c24788502960aa068e2, type: 3}
-    m_FontSize: 24
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   broBuyButton: {fileID: 1374541162}
   broRqImg: {fileID: 1717710867}
   bro: {fileID: 2091499545}
-  money: {fileID: 1973579254}
+  money: {fileID: 547200104}
 --- !u!114 &547200104
 MonoBehaviour:
   m_ObjectHideFlags: 0

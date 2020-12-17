@@ -23,10 +23,9 @@ public class MoneyHandler2 : MonoBehaviour {
     public Image broBtnStar;
     private Button broRqButton;
 
-    public static int money;
+    public static int money = 3000;
 
     void Start() {
-        money = 3000;
         moneyUI.text = "₱ " + money.ToString();
         
         momRqButton = momRq.GetComponent<Button>();
