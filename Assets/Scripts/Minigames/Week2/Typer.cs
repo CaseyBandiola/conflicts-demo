@@ -7,17 +7,23 @@ public class Typer : MonoBehaviour {
     public WordBank wordbank = null;
     public Text wordOutput = null;
 
+    public bool timeUp;
+
     private string remainingWord = string.Empty;
     private string currWord = string.Empty;
 
     private void Start() {
+        timeUp = false;
         // set a word to type
         SetCurrentWord();
     }
 
     private void Update() {
         // checks keyboard input
-        CheckInput();
+        // while time is not up, keep checking for input
+        if( !timeUp ){
+            CheckInput();
+        }
     }
 
     // Sets the current word in the screen
@@ -73,5 +79,9 @@ public class Typer : MonoBehaviour {
     private bool IsWordComplete(){
         // check if remaining word still has chars in it
         return remainingWord.Length == 0;
+    }
+
+    public void TimeUp(){
+        timeUp = !timeUp;
     }
 }

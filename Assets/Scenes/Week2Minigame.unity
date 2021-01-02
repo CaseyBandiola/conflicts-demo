@@ -560,6 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wordBank: {fileID: 852085965}
   timer: {fileID: 1567636471}
+  typer: {fileID: 3672574606891522483}
 --- !u!1 &1490016368
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +944,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1bcffb527b53c4468c79d79999fcb37, type: 3}
+--- !u!114 &3672574606891522483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9130397617880368556, guid: c1bcffb527b53c4468c79d79999fcb37,
+    type: 3}
+  m_PrefabInstance: {fileID: 3672574606891522482}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567636470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a118074a93c52cf41b294053579568aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5330538100990598541
 PrefabInstance:
   m_ObjectHideFlags: 0

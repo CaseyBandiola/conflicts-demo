@@ -23,5 +23,9 @@ public class BossBarUI : MonoBehaviour
     public void Hide(){
     	gameObject.SetActive(false);
     }
+
+	public int showCurrent(){
+		return current;
+	}
 }
 // 
