@@ -47,7 +47,7 @@ public class Timer : MonoBehaviour {
     }
 
     public static void AddTime(){
-        time += 0.5f;
+        time += 0.75f;
     }
 
     void ReduceTime(){

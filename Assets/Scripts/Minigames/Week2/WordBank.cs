@@ -7,6 +7,7 @@ public class WordBank : MonoBehaviour
     private List<string> originalWords = new List<string>()
     {
         "kommunista", "target", "rebelde", "nanlaban", "adik", "instigator", "nationalista", "oligarkiya",
+        "aktibista", "leftist",
     };
 
     private List<string> workingWords = new List<string>();

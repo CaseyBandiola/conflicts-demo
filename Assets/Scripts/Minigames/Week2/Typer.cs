@@ -6,14 +6,20 @@ using UnityEngine.UI;
 public class Typer : MonoBehaviour {
     public WordBank wordbank = null;
     public Text wordOutput = null;
+    public Text scoreText;
 
     public bool timeUp;
 
     private string remainingWord = string.Empty;
     private string currWord = string.Empty;
 
+    private int score;
+    private int maxScore;
+
     private void Start() {
         timeUp = false;
+        score = 0;
+        maxScore = 4;
         // set a word to type
         SetCurrentWord();
     }
@@ -57,8 +63,10 @@ public class Typer : MonoBehaviour {
         if( IsCorrectLetter(letter) ){
             RemoveLetter();
 
-            // if word is done, look for a new word, and add time
+            // if word is done, look for a new word, increment score & score text, and add time
             if( IsWordComplete() ){
+                score++;
+                scoreText.text = "words: " + score + "/4";
                 Timer.AddTime();
                 SetCurrentWord();
             }
@@ -83,5 +91,9 @@ public class Typer : MonoBehaviour {
 
     public void TimeUp(){
         timeUp = !timeUp;
+    }
+
+    public int GetScore(){
+        return score;
     }
 }
