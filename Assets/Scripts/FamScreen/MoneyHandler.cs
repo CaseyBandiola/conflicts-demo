@@ -25,6 +25,8 @@ public class MoneyHandler : MonoBehaviour {
 
     public static int money;
 
+    public SisController sis;
+
     void Start() {
         money = 3000;
         moneyUI.text = "₱ " + money.ToString();
@@ -50,6 +52,9 @@ public class MoneyHandler : MonoBehaviour {
         int price = endWeek.GetSisRqPrice();
         money -= price;
         moneyUI.text = "₱ " + money.ToString();
+
+        // remove request from Sis
+        sis.RemoveUniformRequest();
 
         // once bought, disable the button
         sisRqButton.interactable = false;

@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class BroController : MonoBehaviour
 {
-    private List<string> dialogue = new List<string>() {
-        "Drink dialogue",
-        "Did not drink dialogue",
-    };
     private Dictionary<string, int> requests = new Dictionary<string, int>() {
         // { "art materials", 300},
         // { "uniform", 800 },

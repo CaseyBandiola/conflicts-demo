@@ -3342,7 +3342,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7aaedfb4b92f7c24788502960aa068e2, type: 3}
-    m_FontSize: 16
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3353,7 +3353,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: + 4000
+  m_Text: + 3000 - Salary
 --- !u!222 &1685683865
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3840,6 +3840,7 @@ MonoBehaviour:
   sisBtnStar: {fileID: 1077371986}
   broRq: {fileID: 208875529}
   broBtnStar: {fileID: 1356243109}
+  sis: {fileID: 1476222059}
 --- !u!1 &2056500520
 GameObject:
   m_ObjectHideFlags: 0

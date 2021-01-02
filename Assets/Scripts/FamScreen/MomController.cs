@@ -9,12 +9,12 @@ public class MomController : MonoBehaviour {
         "Kamusta naman trabaho mo? Huwag mo kalimutan mga pangangailangan natin sa bahay.",
     };
     private Dictionary<string, int> requests = new Dictionary<string, int>() { 
-        { "clothes", 900}, 
-        { "food", 1000 }, 
-        { "water", 700 }, 
-        { "school supplies", 1250 }, 
-        { "electricity bill", 4000 } ,
-        { "groceries", 3000 },
+        // { "clothes", 900}, 
+        // { "food", 1000 }, 
+        // { "water", 700 }, 
+        // { "school supplies", 1250 }, 
+        // { "electricity bill", 4000 } ,
+        // { "groceries", 3000 },
     };
     private string weeklyDialogue;
     public bool didDrink;

@@ -46,4 +46,10 @@ public class SisController : MonoBehaviour {
         weeklyDialogue = "Pa, kailangan ko ng bagong uniform para sa school. (1 week)";
         return weeklyDialogue;
     }
+
+    public void RemoveUniformRequest(){
+        Debug.Log(requests.Count);
+        requests.Remove("uniform");
+        Debug.Log(requests.Count);
+    }
 }
