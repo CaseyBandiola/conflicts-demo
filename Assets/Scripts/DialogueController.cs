@@ -36,6 +36,8 @@ public class DialogueController : MonoBehaviour
 
     public GameObject bossBar;
     private BossBarUI bossBarUI;
+
+    public AudioSource audioSource;
 	
 	//private GameObject user;
 	//private InitialSurvey user;
@@ -173,6 +175,9 @@ public class DialogueController : MonoBehaviour
 	public void ChooseOption1(){
 		choicesMade.Add(dialogue.responseOptions[0].text);
 		dialogue = dialogue.responseOptions[0].nextDialogue;
+		if(dialogue.audioClip != null){
+			audioSource.PlayOneShot(dialogue.audioClip, 0.15F);
+		}
 		button1.SetActive(false);
 		button2.SetActive(false);
 		Initialize();
@@ -181,6 +186,9 @@ public class DialogueController : MonoBehaviour
 	public void ChooseOption2(){
 		choicesMade.Add(dialogue.responseOptions[1].text);
 		dialogue = dialogue.responseOptions[1].nextDialogue;
+		if(dialogue.audioClip != null){
+			audioSource.PlayOneShot(dialogue.audioClip, 0.15F);
+		}
 		button1.SetActive(false);
 		button2.SetActive(false);
 		Initialize();

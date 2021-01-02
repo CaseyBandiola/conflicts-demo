@@ -338,8 +338,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1271, y: 634}
+  m_AnchoredPosition: {x: 3.5, y: -2.8}
+  m_SizeDelta: {x: 1001.07874, y: 559.614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609489960
 MonoBehaviour:
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8cd5d74c0fe26474aa2220cc73000fa5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1019e1c78d57e154988f5f1f984bda44, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -415,7 +415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9}
+  m_AnchoredPosition: {x: 0, y: -9.000076}
   m_SizeDelta: {x: -245.36115, y: -105.780304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &827117670
@@ -534,8 +534,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283957503
-  m_fontColor: {r: 1, g: 0, b: 0.34668684, a: 1}
+    rgba: 4283641085
+  m_fontColor: {r: 0.99215686, g: 0.17254902, b: 0.3254902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -680,6 +680,7 @@ GameObject:
   - component: {fileID: 1781203902}
   - component: {fileID: 1781203901}
   - component: {fileID: 1781203903}
+  - component: {fileID: 1781203904}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -857,3 +858,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &1781203904
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781203899}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb29552420ce2a644b538c7e08b2b461, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

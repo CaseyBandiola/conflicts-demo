@@ -22,3 +22,4 @@ MonoBehaviour:
   continueDialogue: {fileID: 11400000, guid: df0bb41e56b20fc4ebdc749ba8e05120, type: 2}
   familyEffect: 10
   bossEffect: -10
+  audioClip: {fileID: 8300000, guid: 0743d3966e8f56541b25cde23a585c72, type: 3}

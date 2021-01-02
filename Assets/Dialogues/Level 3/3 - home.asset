@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b07c52cd5ce9f4a8b70436ae3bbb6b, type: 3}
+  m_Name: 3 - home
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: e00bfe43239629549a2207e23fae6c1f, type: 3}
+  speakerLeft: {fileID: 11400000, guid: 4ccb15404d15a654ab9e1e60b8b920f5, type: 2}
+  speakerRight: {fileID: 11400000, guid: c806164d025778445ba310b215baed51, type: 2}
+  dialogues:
+  - 
+  - Albert, nakita mo ba si Antonio kanina?
+  - Hindi, baka natutulog pa siya o hindi lang lumalabas ng kwarto.
+  - Wala siya sa kwarto niya. Wala rin ang iba niyang gamit at damit. Hindi rin siya
+    sumasagot sa mga tawag ko. Saan na kaya siya? Nagpaalam ba siya sayo?
+  - Hindi, nakita ko naman siyang tulog sa kwarto niya kagabi.
+  responseOptions: []
+  continueDialogue: {fileID: 11400000, guid: 1b0b3baa5f029b548b17b1278271aff4, type: 2}
+  familyEffect: 0
+  bossEffect: 0
+  audioClip: {fileID: 0}

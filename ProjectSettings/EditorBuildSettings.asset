@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InitialSurvey.unity
     guid: 9cba27acc7c413842933b21e36bfc1c3
+  - enabled: 1
+    path: Assets/Scenes/Level 3/DialogueScene3.unity
+    guid: ed059316a4bee15449ed5125449cd6a8
+  - enabled: 1
+    path: Assets/Scenes/Level 3/AfterMinigame3.unity
+    guid: dac047b9deff7b94989cb71c951c1b45
   m_configObjects: {}

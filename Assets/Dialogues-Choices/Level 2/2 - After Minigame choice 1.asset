@@ -16,7 +16,7 @@ MonoBehaviour:
   speakerLeft: {fileID: 11400000, guid: 4ccb15404d15a654ab9e1e60b8b920f5, type: 2}
   speakerRight: {fileID: 11400000, guid: c806164d025778445ba310b215baed51, type: 2}
   dialogues:
-  - Honey, nakauiwi na ako.
+  - Honey, nakauwi na ako.
   - Oh, Albert. Napa-aga ka ata ngayon?
   - 'Oo, pinauwi ako nang maaga ng boss ko. '
   - Tulungan mo naman si Ana sa homework niya. Kanina pa siya humihingi ng tulong
@@ -28,3 +28,4 @@ MonoBehaviour:
   continueDialogue: {fileID: 0}
   familyEffect: 5
   bossEffect: 0
+  audioClip: {fileID: 8300000, guid: b4e7090cc02de35448b42c4b07edbd2f, type: 3}

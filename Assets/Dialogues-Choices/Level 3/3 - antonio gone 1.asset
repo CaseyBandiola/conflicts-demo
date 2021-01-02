@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b07c52cd5ce9f4a8b70436ae3bbb6b, type: 3}
+  m_Name: 3 - antonio gone 1
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: e00bfe43239629549a2207e23fae6c1f, type: 3}
+  speakerLeft: {fileID: 11400000, guid: 4ccb15404d15a654ab9e1e60b8b920f5, type: 2}
+  speakerRight: {fileID: 11400000, guid: c806164d025778445ba310b215baed51, type: 2}
+  dialogues:
+  - Ayos lang yan. Matanda na si Antonio. Alam na niya kung ano ang tama o mali.
+    Babalik din siya.
+  - Ano ka ba? Paano kung may nangyaring masama sa kanya? Paano kung nagdodroga siya
+    tapos mahuli ng pulis? O totoong na-kidnap nga siya? Wala ka talagang gagawin?
+  responseOptions:
+  - text: Walang reaksyon
+    nextDialogue: {fileID: 11400000, guid: cd4e5f246f2a5714baec5b249a308320, type: 2}
+  - text: Ipangako na tutulong kung totoong may nangyari sa kanya
+    nextDialogue: {fileID: 11400000, guid: be992dd1c94277f458222b9154350c83, type: 2}
+  continueDialogue: {fileID: 0}
+  familyEffect: -10
+  bossEffect: 0
+  audioClip: {fileID: 8300000, guid: 0743d3966e8f56541b25cde23a585c72, type: 3}

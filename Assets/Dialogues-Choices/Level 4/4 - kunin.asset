@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b07c52cd5ce9f4a8b70436ae3bbb6b, type: 3}
+  m_Name: 4 - kunin
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 4a292a175a26e8d47a86acb4a17ddc31, type: 3}
+  speakerLeft: {fileID: 11400000, guid: 38da52f7884680043a26dbbe507ae2d0, type: 2}
+  speakerRight: {fileID: 11400000, guid: 0716e486662f1d24592fb8ad8240b997, type: 2}
+  dialogues:
+  - Binulsa mo ang pera at itinapon ang sulat.
+  - Albert! Punta na tayo sa briefing ng isasagawa nating raid mamaya.
+  responseOptions: []
+  continueDialogue: {fileID: 11400000, guid: 99faebe3f32c51a48ab5caaeac092c63, type: 2}
+  familyEffect: 0
+  bossEffect: -15
+  audioClip: {fileID: 8300000, guid: 0743d3966e8f56541b25cde23a585c72, type: 3}

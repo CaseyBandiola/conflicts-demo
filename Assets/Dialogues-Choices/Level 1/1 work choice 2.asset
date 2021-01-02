@@ -27,3 +27,4 @@ MonoBehaviour:
   continueDialogue: {fileID: 0}
   familyEffect: 0
   bossEffect: 0
+  audioClip: {fileID: 0}
