@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndWeek : MonoBehaviour {
     // Week objects
@@ -49,6 +50,10 @@ public class EndWeek : MonoBehaviour {
         UpdateRequest();
         UpdateWeek();
         ResetButtons();
+
+        // load minigame
+        Loader.Load(Loader.Scene.Week2Minigame);
+        
     }
 
     // Update UI Dialogue weekly

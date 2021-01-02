@@ -11,6 +11,7 @@ public static class Loader {
         AfterMinigame1,
         FamScreen,
         Week2,
+        Week2Minigame,
 
     }
     public static void Load(Scene scene){
