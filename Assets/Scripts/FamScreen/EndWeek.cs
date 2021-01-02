@@ -66,7 +66,7 @@ public class EndWeek : MonoBehaviour {
     // Update UI Requests weekly
     public void UpdateRequest(){
         // Mom requests
-        KeyValuePair<string, int> mrq = mom.GetRequest();
+        KeyValuePair<string, int> mrq = new KeyValuePair<string, int>("None", 0);
         string mrqText = mrq.Key.Equals("None") ? "Request: " + mrq.Key : "Request: " + mrq.Key + " - ₱ " + mrq.Value.ToString();
         momRequest.text = mrqText;
         momRqPrice = mrq.Value;
@@ -78,7 +78,7 @@ public class EndWeek : MonoBehaviour {
         }
 
         // Sis requests
-        KeyValuePair<string, int> srq = sis.GetRequest();
+        KeyValuePair<string, int> srq = sis.GetRequest1();
         string srqText = srq.Key.Equals("None") ? "Request: " + srq.Key : "Request: " + srq.Key + " - ₱ " + srq.Value.ToString();
         sisRequest.text = srqText;
         sisRqPrice = srq.Value;

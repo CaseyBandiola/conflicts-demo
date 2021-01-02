@@ -8,7 +8,7 @@ public class SisController : MonoBehaviour {
         "Drink dialogue",
         "Did not drink dialogue",
     };
-    private Dictionary<string, int> requests = new Dictionary<string, int>() {
+    private static Dictionary<string, int> requests = new Dictionary<string, int>() {
         { "uniform", 2500 },
     };
     private string weeklyDialogue;
@@ -18,7 +18,7 @@ public class SisController : MonoBehaviour {
         didDrink = false;
     }
 
-    public KeyValuePair<string, int> GetRequest(){
+    public KeyValuePair<string, int> GetRequest1(){
         // random request every week
         KeyValuePair<string, int> weeklyRequest;
         int rqIndex = Random.Range(0, requests.Count + 1);
@@ -33,6 +33,21 @@ public class SisController : MonoBehaviour {
         return weeklyRequest;
     }
 
+    public KeyValuePair<string, int> GetRequest2(){
+        // random request every week
+        KeyValuePair<string, int> weeklyRequest;
+        int rqIndex = Random.Range(0, requests.Count + 1);
+        if (rqIndex == requests.Count) {
+            weeklyRequest = new KeyValuePair<string, int>("None", 0);
+        } else {
+            weeklyRequest = requests.ElementAt(rqIndex);
+        }
+        
+        //weeklyRequest = requests.ElementAt(0);
+
+        return weeklyRequest;
+    }
+
     public string GetDialogue(){
         // sets weekly dialogue if the Player drank or not
         //weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
@@ -43,13 +58,17 @@ public class SisController : MonoBehaviour {
     public string GetDialogue2(){
         // sets weekly dialogue if the Player drank or not
         //weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
-        weeklyDialogue = "Pa, kailangan ko ng bagong uniform para sa school. (1 week)";
+        string weeklyDialogue;
+        if( requests.Count > 0 ){
+            weeklyDialogue = "Pa, kailangan ko ng bagong uniform para sa school. (1 week)";
+        } else {
+            weeklyDialogue = "Salamat po sa bagong uniform ko, Pa!";
+        }
+        
         return weeklyDialogue;
     }
 
-    public void RemoveUniformRequest(){
-        Debug.Log(requests.Count);
+    public static void RemoveUniformRequest(){
         requests.Remove("uniform");
-        Debug.Log(requests.Count);
     }
 }

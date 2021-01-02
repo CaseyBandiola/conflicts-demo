@@ -14,7 +14,7 @@ public class MomController : MonoBehaviour {
         // { "water", 700 }, 
         // { "school supplies", 1250 }, 
         // { "electricity bill", 4000 } ,
-        // { "groceries", 3000 },
+        { "groceries", 3000 },
     };
     private string weeklyDialogue;
     public bool didDrink;
@@ -45,7 +45,7 @@ public class MomController : MonoBehaviour {
         // } else {
         //     weeklyRequest = requests.ElementAt(rqIndex);
         // }
-        weeklyRequest = requests.ElementAt(5);
+        weeklyRequest = requests.ElementAt(0);
 
         return weeklyRequest;
     }

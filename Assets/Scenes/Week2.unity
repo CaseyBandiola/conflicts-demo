@@ -1105,6 +1105,8 @@ MonoBehaviour:
   sisBtnStar: {fileID: 1972114409}
   broRq: {fileID: 1374541162}
   broBtnStar: {fileID: 1717710867}
+  mh: {fileID: 1973579254}
+  money: 0
 --- !u!1 &576188186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,17 +3576,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1973579252}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadbe79d5845eb344a6ce75434fb9926, type: 3}
+  m_Script: {fileID: 11500000, guid: fe986c4e494574a4bac3abff6cd8c3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyUI: {fileID: 1693458967}
-  endWeek: {fileID: 547200103}
-  momRq: {fileID: 576188186}
-  momBtnStar: {fileID: 1955910299}
-  sisRq: {fileID: 1031946787}
-  sisBtnStar: {fileID: 1972114409}
-  broRq: {fileID: 1374541162}
-  broBtnStar: {fileID: 1717710867}
+  moneyUI: {fileID: 0}
+  endWeek: {fileID: 0}
+  momRq: {fileID: 0}
+  momBtnStar: {fileID: 0}
+  sisRq: {fileID: 0}
+  sisBtnStar: {fileID: 0}
+  broRq: {fileID: 0}
+  broBtnStar: {fileID: 0}
+  sis: {fileID: 0}
 --- !u!1 &1998176238
 GameObject:
   m_ObjectHideFlags: 0

@@ -54,7 +54,7 @@ public class MoneyHandler : MonoBehaviour {
         moneyUI.text = "₱ " + money.ToString();
 
         // remove request from Sis
-        sis.RemoveUniformRequest();
+        SisController.RemoveUniformRequest();
 
         // once bought, disable the button
         sisRqButton.interactable = false;
@@ -91,5 +91,9 @@ public class MoneyHandler : MonoBehaviour {
     public void AddMoney(int amt){
         money += amt;
         moneyUI.text = "₱ " + money.ToString();
+    }
+
+    public int GetMoney(){
+        return money;
     }
 }

@@ -39,7 +39,7 @@ public class Week2_fam : MonoBehaviour {
     void Start() {
         weekNum = 2;
         week.text = "Week " + weekNum;
-        money.AddMoney(2500);
+        // money.AddMoney(2500);
         UpdateDialogue();
         UpdateRequest();
     }
@@ -59,7 +59,7 @@ public class Week2_fam : MonoBehaviour {
         }
 
         // Sis requests
-        KeyValuePair<string, int> srq = sis.GetRequest();
+        KeyValuePair<string, int> srq = sis.GetRequest2();
         string srqText = srq.Key.Equals("None") ? "Request: " + srq.Key : "Request: " + srq.Key + " - ₱ " + srq.Value.ToString();
         sisRequest.text = srqText;
         sisRqPrice = srq.Value;
