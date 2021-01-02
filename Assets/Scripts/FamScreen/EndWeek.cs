@@ -46,10 +46,10 @@ public class EndWeek : MonoBehaviour {
     }
 
     public void EndWeekPressed(){
-        UpdateDialogue();
-        UpdateRequest();
-        UpdateWeek();
-        ResetButtons();
+        // UpdateDialogue();
+        // UpdateRequest();
+        // UpdateWeek();
+        // ResetButtons();
 
         // load minigame
         Loader.Load(Loader.Scene.Week2Minigame);
