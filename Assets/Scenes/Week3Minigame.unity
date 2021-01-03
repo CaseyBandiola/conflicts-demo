@@ -1484,6 +1484,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2760226758688233818, guid: 8764ac3eed265bf43bfd886e128259c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76894d555f5c20b4fa74905243e69c06,
+        type: 3}
     - target: {fileID: 6759433958848749209, guid: 8764ac3eed265bf43bfd886e128259c3,
         type: 3}
       propertyPath: m_Name
@@ -3085,6 +3091,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2760226758688233818, guid: 8764ac3eed265bf43bfd886e128259c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76894d555f5c20b4fa74905243e69c06,
+        type: 3}
     - target: {fileID: 6759433958848749209, guid: 8764ac3eed265bf43bfd886e128259c3,
         type: 3}
       propertyPath: m_Name
@@ -4714,6 +4726,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2760226758688233818, guid: 8764ac3eed265bf43bfd886e128259c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76894d555f5c20b4fa74905243e69c06,
+        type: 3}
     - target: {fileID: 6759433958848749209, guid: 8764ac3eed265bf43bfd886e128259c3,
         type: 3}
       propertyPath: m_Name
@@ -6447,6 +6465,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2760226758688233818, guid: 8764ac3eed265bf43bfd886e128259c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76894d555f5c20b4fa74905243e69c06,
+        type: 3}
     - target: {fileID: 6759433958848749209, guid: 8764ac3eed265bf43bfd886e128259c3,
         type: 3}
       propertyPath: m_Name
@@ -6694,6 +6718,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2760226758688233818, guid: 8764ac3eed265bf43bfd886e128259c3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76894d555f5c20b4fa74905243e69c06,
+        type: 3}
     - target: {fileID: 6759433958848749209, guid: 8764ac3eed265bf43bfd886e128259c3,
         type: 3}
       propertyPath: m_Name
