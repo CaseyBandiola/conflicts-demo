@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class PlayerController4 : MonoBehaviour
 {
-    private float speed = 10f;
+    private float speed;
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start(){
+        speed = 0.5f;
     }
 
     // Update is called once per frame
     void Update() {
+        //float horizontal = Input.GetAxis("Horizontal");
         MovePlayer();
+        if( Input.GetKey(KeyCode.Space) ){
+            AddSpeed(1f);
+        }
     }
 
     private void MovePlayer(){
@@ -53,5 +56,9 @@ public class PlayerController4 : MonoBehaviour
                 transform.Translate(0, speed * Time.deltaTime, 0);
             }
         }
+    }
+
+    public void AddSpeed(float s){
+        speed += s;
     }
 }

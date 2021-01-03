@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 371896421}
   m_Layer: 0
   m_Name: Antonio
-  m_TagString: Evidence
+  m_TagString: Exit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,7 +539,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1583168890
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +810,7 @@ PrefabInstance:
     - target: {fileID: 8087637861381850110, guid: 6cbafd266b9c76b418d906675715d54c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.108
+      value: 2.588
       objectReference: {fileID: 0}
     - target: {fileID: 8087637861381850110, guid: 6cbafd266b9c76b418d906675715d54c,
         type: 3}
@@ -860,7 +860,7 @@ PrefabInstance:
     - target: {fileID: 8087637861381850110, guid: 6cbafd266b9c76b418d906675715d54c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9094424
+      value: 1.0576189
       objectReference: {fileID: 0}
     - target: {fileID: 8087637861381850110, guid: 6cbafd266b9c76b418d906675715d54c,
         type: 3}
