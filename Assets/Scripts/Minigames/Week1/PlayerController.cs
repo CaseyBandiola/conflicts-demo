@@ -11,21 +11,31 @@ public class PlayerController : MonoBehaviour
     public Text evidenceAmt;
     public Text playerWon;
     public Text detectionStatus;
+    public Text livesAmt;
     private int maxScore = 3;
     private int lives;
+    private bool hasLives;
     private bool hasWon;
     private bool isDetected;
+    private bool lifeLost;
     
+
+    // original player position
+    private Vector3 origPos;
+
     public GameObject[] cameras;
     public GameObject cam1;
     public GameObject cam2;
     // Start is called before the first frame update
     void Start(){
-        lives = 3;
+        lives = 5;
+        hasLives = true;
         speed = 10.0f;
         evidenceCollected = 0;
         hasWon = false;
         isDetected = false;
+        lifeLost = false;
+        origPos = gameObject.transform.position;
         cam1 = GameObject.Find("Camera1");
         cam2 = GameObject.Find("Camera2");
         cameras = new GameObject[2]{ cam1, cam2 };
@@ -34,13 +44,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update(){
         MovePlayer();
-        // if R pressed, restart
-        // if ( Input.GetKey(KeyCode.R) && hasWon ) {
-        //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        // }
-        // if player has won, load next scene
+        
+        // if player has won, load pass scene
         if( hasWon ){
             playerWon.text = "All evidence collected! Press 'Enter' to proceed";
+            if( Input.GetKey(KeyCode.Return) ) Loader.Load(Loader.Scene.AfterMinigame1);
+        }
+
+        // if player has no lives, load fail scene
+        if( !hasLives ){
+            // if player has no more lives, load next scene
+            playerWon.text = "No more lives! Press 'Enter' to proceed";
             if( Input.GetKey(KeyCode.Return) ) Loader.Load(Loader.Scene.AfterMinigame1);
         }
     }
@@ -50,20 +64,22 @@ public class PlayerController : MonoBehaviour
     }
 
     private void MovePlayer(){
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)){
-            transform.Translate(-speed * Time.deltaTime, 0, 0);
-        }
+        if( hasLives ){
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)){
+                transform.Translate(-speed * Time.deltaTime, 0, 0);
+            }
 
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)){
-            transform.Translate(speed * Time.deltaTime, 0, 0);
-        }
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)){
+                transform.Translate(speed * Time.deltaTime, 0, 0);
+            }
 
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)){
-            transform.Translate(0, speed * Time.deltaTime, 0);
-        }
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)){
+                transform.Translate(0, speed * Time.deltaTime, 0);
+            }
 
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)){
-            transform.Translate(0, -speed * Time.deltaTime, 0);
+            if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)){
+                transform.Translate(0, -speed * Time.deltaTime, 0);
+            }
         }
     }
 
@@ -125,13 +141,12 @@ public class PlayerController : MonoBehaviour
 
     private void addEvidence(){
         evidenceCollected++;
-        evidenceAmt.text = "Evidence collected: " + evidenceCollected;
+        evidenceAmt.text = "Evidence: " + evidenceCollected;
     }
 
     private void CheckDetection(){
         int size = 0;
         int maxSize = 0;
-
         // check each camera if they see any player
         // this works because the player can only be seen by one camera at a time
         foreach( GameObject cam in cameras ){
@@ -145,10 +160,25 @@ public class PlayerController : MonoBehaviour
             // do detection checks here
             isDetected = true;
             detectionStatus.text = "isDetected: " + isDetected;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            
+            // make sure it runs once only
+            
+            if( !lifeLost ){
+                lifeLost = true;
+                lives--;
+            }
+            // update lives in text
+            livesAmt.text = "Lives: " + lives;
+            // reset to original position
+            gameObject.transform.position = origPos;
         } else {
             isDetected = false;
             detectionStatus.text = "isDetected: " + isDetected;
+            lifeLost = false;
+
+            if( lives <= 0 ){
+                hasLives = false;
+            }
         }
     }
 }
