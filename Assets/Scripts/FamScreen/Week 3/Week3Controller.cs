@@ -41,7 +41,7 @@ public class Week3Controller : MonoBehaviour
         weekNum = 3;
         week.text = "Week " + weekNum;
         UpdateDialogue();
-        UpdateRequest();
+        
 
         // total money ever
         money.AddMoney(3000 + 2500 + 2500);
@@ -50,10 +50,11 @@ public class Week3Controller : MonoBehaviour
             money.AddMoney(-2500);
         }
         // if bought groceries
-        if( mom.RequestCount() == 1 ){
+        if( mom.RequestCount() == 0 ){
             money.AddMoney(-3000);
         }
-        
+
+        UpdateRequest();
     }
 
     // Update is called once per frame
