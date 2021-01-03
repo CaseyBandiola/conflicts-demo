@@ -12,6 +12,7 @@ public class Week2Controller : MonoBehaviour {
     public Text word;
 
     public bool timeUp;
+    public static bool didPass;
     void Start()
     {
         timeUp = false;
@@ -38,11 +39,14 @@ public class Week2Controller : MonoBehaviour {
             if( typer.GetScore() >= 4 ){
                 // load dialogue scene for PASS
                 if( Input.GetKey(KeyCode.Return) ){
+                    didPass = true;
                     Loader.Load(Loader.Scene.Week2);
+                    
                 } 
             } else {
                 // load dialogue scene for FAIL
                 if( Input.GetKey(KeyCode.Return) ){
+                    didPass = false;
                     Loader.Load(Loader.Scene.Week2);
                 } 
             }

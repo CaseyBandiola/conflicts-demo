@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Week3Controller : MonoBehaviour
 {
@@ -45,6 +46,10 @@ public class Week3Controller : MonoBehaviour
 
         // total money ever
         money.AddMoney(3000 + 2500 + 2500);
+        // if week 2 minigame success, add 1000
+        if( Week2Controller.didPass ){
+            money.AddMoney(1000);
+        }
         // if bought uniform
         if( sis.RequestCount() == 0 ){
             money.AddMoney(-2500);

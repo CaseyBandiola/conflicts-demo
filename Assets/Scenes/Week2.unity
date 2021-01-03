@@ -442,7 +442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694998a7118ed2a42970aa22d3c9fb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: -67
   mask: {fileID: 474883301}
   fill: {fileID: 420490968}
   fillColor: {r: 1, g: 0.63, b: 0, a: 1}
@@ -1035,6 +1034,7 @@ GameObject:
   - component: {fileID: 547200102}
   - component: {fileID: 547200103}
   - component: {fileID: 547200104}
+  - component: {fileID: 547200105}
   m_Layer: 0
   m_Name: Week2Controller
   m_TagString: Untagged
@@ -1106,7 +1106,24 @@ MonoBehaviour:
   broRq: {fileID: 1374541162}
   broBtnStar: {fileID: 1717710867}
   mh: {fileID: 1973579254}
-  money: 0
+--- !u!114 &547200105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547200101}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131d618a82021454994b9b2848403e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordBank: {fileID: 0}
+  timer: {fileID: 0}
+  typer: {fileID: 0}
+  endGame: {fileID: 0}
+  word: {fileID: 0}
+  timeUp: 0
 --- !u!1 &576188186
 GameObject:
   m_ObjectHideFlags: 0

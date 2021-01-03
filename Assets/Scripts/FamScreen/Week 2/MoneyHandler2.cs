@@ -30,7 +30,9 @@ public class MoneyHandler2 : MonoBehaviour {
     void Start() {
         money += mh.GetMoney();
         AddMoney(2500);
-        
+        if( Week2Controller.didPass ){
+            AddMoney(1000);
+        }
         moneyUI.text = "₱ " + money.ToString();
         momRqButton = momRq.GetComponent<Button>();
         sisRqButton = sisRq.GetComponent<Button>();
