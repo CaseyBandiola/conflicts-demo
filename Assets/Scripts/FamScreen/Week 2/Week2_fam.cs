@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Week2_fam : MonoBehaviour {
     // Week objects
@@ -106,5 +107,9 @@ public class Week2_fam : MonoBehaviour {
         // UpdateRequest();
         // UpdateWeek();
         // ResetButtons();
+
+        // temp family testing
+        // load next dialogue scene here, don't forget to put in build settings and the Loader.cs class
+        Loader.Load(Loader.Scene.Week3);
     }
 }

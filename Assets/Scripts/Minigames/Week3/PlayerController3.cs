@@ -47,8 +47,8 @@ public class PlayerController3 : MonoBehaviour{
         // if player has won, load next scene
         if (hasWon){
             playerWon.text = "All evidence collected! Press 'Enter' to proceed";
-            // load the next scene here
-            if (Input.GetKey(KeyCode.Return)) Loader.Load(Loader.Scene.AfterMinigame1);
+            // load the next scene here for dialogue, I made it Week 3 temporarily
+            if (Input.GetKey(KeyCode.Return)) Loader.Load(Loader.Scene.Week3);
         }
     }
 

@@ -25,10 +25,10 @@ public class MoneyHandler2 : MonoBehaviour {
 
     public MoneyHandler mh;
 
-    public int money; //= mh.GetMoney();
+    public static int money = 0; //= mh.GetMoney();
 
     void Start() {
-        money = mh.GetMoney();
+        money += mh.GetMoney();
         AddMoney(2500);
         
         moneyUI.text = "₱ " + money.ToString();

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FamProgressBar : MonoBehaviour {
     private int minimum;
     private int maximum;
-    public int current;
+    public static int current;
     public Image mask;
     public Image fill;
     public Color fillColor;
@@ -55,5 +55,9 @@ public class FamProgressBar : MonoBehaviour {
         }
 
         return currColor;
+    }
+
+    public static void ChangeFill(int amt){
+        current += amt;
     }
 }

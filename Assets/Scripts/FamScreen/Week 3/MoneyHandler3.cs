@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MoneyHandler3 : MonoBehaviour
-{
+public class MoneyHandler3 : MonoBehaviour {
     public Text moneyUI;
     public Week3Controller endWeek;
 
@@ -24,13 +23,13 @@ public class MoneyHandler3 : MonoBehaviour
     public Image broBtnStar;
     private Button broRqButton;
 
-    public MoneyHandler2 mh;
+    public MoneyHandler2 mh2;
 
-    public int money; //= mh.GetMoney();
+    public int money = 0; //= mh.GetMoney();
 
     void Start(){
-        money = mh.GetMoney();
-        AddMoney(2500);
+        // money = mh2.GetMoney();
+        // AddMoney(2500);
 
         moneyUI.text = "₱ " + money.ToString();
         momRqButton = momRq.GetComponent<Button>();

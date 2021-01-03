@@ -59,7 +59,19 @@ public class MomController : MonoBehaviour {
         // } else {
         //     weeklyRequest = requests.ElementAt(rqIndex);
         // }
-        weeklyRequest = requests.ElementAt(0);
+
+        // if there is still groceries, deduct family bar, either way, have the lawyer request pop up
+        if( requests.Count == 1 ){
+            // reduce the family bar satisfaction
+            FamProgressBar.ChangeFill(-30);
+            requests.Remove("groceries");
+            requests.Add("Lawyer", 5000);
+            weeklyRequest = requests.ElementAt(0);
+        } else {
+            requests.Add("Lawyer", 5000);
+            weeklyRequest = requests.ElementAt(0);
+        }
+        
 
         return weeklyRequest;
     }
@@ -88,11 +100,25 @@ public class MomController : MonoBehaviour {
     public string GetDialogue3(){
         // sets weekly dialogue
         // if groceries were paid, start of dialogue is different
-        weeklyDialogue += "Kailangan ko nang pumunta sa palengke at grocery para sa bahay. (P3,000 - due now)";
+        if( requests.Count == 1 ){
+            weeklyDialogue += "Wala na tayong makain, Albert. Walang pera para mamalengke at pumunta ng grocery.";
+        } else {
+            weeklyDialogue += "Nakabili na ako ng kakainin natin. Salamat Albert.";
+        }
+
+        weeklyDialogue += " Mag-ipon na na rin tayo para sa pam-piyansa at abogado ni Antonio.";
         return weeklyDialogue;
     }
 
     public static void RemoveGroceryRequest(){
         requests.Remove("groceries");
+    }
+
+    public static void RemoveLawyerRequest(){
+        requests.Remove("Lawyer");
+    }
+
+    public int RequestCount(){
+        return requests.Count;
     }
 }

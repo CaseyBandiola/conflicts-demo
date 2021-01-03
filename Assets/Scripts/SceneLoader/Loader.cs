@@ -12,7 +12,9 @@ public static class Loader {
         FamScreen,
         Week2,
         Week2Minigame,
-
+        Week3,
+        Week3Minigame,
+        
     }
     public static void Load(Scene scene){
         // load a given scene

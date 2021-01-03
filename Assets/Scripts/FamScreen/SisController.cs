@@ -58,10 +58,10 @@ public class SisController : MonoBehaviour {
         // random request every week
         KeyValuePair<string, int> weeklyRequest;
         
-        // if there is still a request, force it, otherwise, force none
+        // if there is still a request, deduct family bar and force none
         if( requests.Count == 1 ){
             // reduce family bar satisfaction
-            weeklyRequest = requests.ElementAt(0);
+            weeklyRequest = new KeyValuePair<string, int>("None", 0);
         } else {
             weeklyRequest = new KeyValuePair<string, int>("None", 0);
         }
@@ -105,5 +105,9 @@ public class SisController : MonoBehaviour {
 
     public static void RemoveUniformRequest(){
         requests.Remove("uniform");
+    }
+
+    public int RequestCount(){
+        return requests.Count;
     }
 }

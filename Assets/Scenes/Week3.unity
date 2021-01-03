@@ -1811,7 +1811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694998a7118ed2a42970aa22d3c9fb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: -67
   mask: {fileID: 581084126}
   fill: {fileID: 1744084804}
   fillColor: {r: 1, g: 0.63, b: 0, a: 1}
@@ -2850,7 +2849,6 @@ MonoBehaviour:
   broRq: {fileID: 0}
   broBtnStar: {fileID: 0}
   mh: {fileID: 0}
-  money: 0
 --- !u!4 &1202632162
 Transform:
   m_ObjectHideFlags: 0
@@ -3031,7 +3029,7 @@ MonoBehaviour:
   sisBtnStar: {fileID: 698306853}
   broRq: {fileID: 1541316706}
   broBtnStar: {fileID: 97629317}
-  mh: {fileID: 1202632161}
+  mh2: {fileID: 1202632161}
   money: 0
 --- !u!114 &1337971771
 MonoBehaviour:
