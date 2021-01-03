@@ -57,6 +57,9 @@ public class MoneyHandler3 : MonoBehaviour
             money -= price;
             moneyUI.text = "₱ " + money.ToString();
 
+            // remove request from Sis
+            SisController.RemoveUniformRequest();
+
             // once bought, disable the button
             sisRqButton.interactable = false;
             sisRq.GetComponentInChildren<Text>().text = "BOUGHT";

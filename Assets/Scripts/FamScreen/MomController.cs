@@ -8,7 +8,7 @@ public class MomController : MonoBehaviour {
         "Susunod, umuwi ka nang mas maaga o sabihan mo muna ako pag late ka uuwi. Huwag mo kalimutan mga pangangailangan natin sa bahay.",
         "Kamusta naman trabaho mo? Huwag mo kalimutan mga pangangailangan natin sa bahay.",
     };
-    private Dictionary<string, int> requests = new Dictionary<string, int>() { 
+    private static Dictionary<string, int> requests = new Dictionary<string, int>() { 
         // { "clothes", 900}, 
         // { "food", 1000 }, 
         // { "water", 700 }, 
@@ -50,6 +50,20 @@ public class MomController : MonoBehaviour {
         return weeklyRequest;
     }
 
+    public KeyValuePair<string, int> GetRequest3(){
+        // random request every week
+        KeyValuePair<string, int> weeklyRequest;
+        // int rqIndex = Random.Range(0, requests.Count+1);
+        // if( rqIndex == requests.Count ){
+        //     weeklyRequest = new KeyValuePair<string, int>("None",0);
+        // } else {
+        //     weeklyRequest = requests.ElementAt(rqIndex);
+        // }
+        weeklyRequest = requests.ElementAt(0);
+
+        return weeklyRequest;
+    }
+
     public string GetDialogue(){
         // checks if player drank
         string drink = "test";//DialogueController.choicesMade[2];
@@ -69,5 +83,16 @@ public class MomController : MonoBehaviour {
         //weeklyDialogue = didDrink ? dialogue[0] : dialogue[1];
         weeklyDialogue = "Kailangan ko nang pumunta sa palengke at grocery para sa bahay. (P3,000 - due now)";
         return weeklyDialogue;
+    }
+
+    public string GetDialogue3(){
+        // sets weekly dialogue
+        // if groceries were paid, start of dialogue is different
+        weeklyDialogue += "Kailangan ko nang pumunta sa palengke at grocery para sa bahay. (P3,000 - due now)";
+        return weeklyDialogue;
+    }
+
+    public static void RemoveGroceryRequest(){
+        requests.Remove("groceries");
     }
 }

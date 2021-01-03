@@ -36,15 +36,31 @@ public class SisController : MonoBehaviour {
     public KeyValuePair<string, int> GetRequest2(){
         // random request every week
         KeyValuePair<string, int> weeklyRequest;
-        int rqIndex = Random.Range(0, requests.Count + 1);
-        if (rqIndex == requests.Count) {
-            weeklyRequest = new KeyValuePair<string, int>("None", 0);
-        } else {
-            weeklyRequest = requests.ElementAt(rqIndex);
-        }
+        // int rqIndex = Random.Range(0, requests.Count + 1);
+        // if (rqIndex == requests.Count) {
+        //     weeklyRequest = new KeyValuePair<string, int>("None", 0);
+        // } else {
+        //     weeklyRequest = requests.ElementAt(rqIndex);
+        // }
         
         // if there is still a request, force it, otherwise, force none
         if( requests.Count == 1 ){
+            weeklyRequest = requests.ElementAt(0);
+        } else {
+            weeklyRequest = new KeyValuePair<string, int>("None", 0);
+        }
+        
+
+        return weeklyRequest;
+    }
+
+    public KeyValuePair<string, int> GetRequest3(){
+        // random request every week
+        KeyValuePair<string, int> weeklyRequest;
+        
+        // if there is still a request, force it, otherwise, force none
+        if( requests.Count == 1 ){
+            // reduce family bar satisfaction
             weeklyRequest = requests.ElementAt(0);
         } else {
             weeklyRequest = new KeyValuePair<string, int>("None", 0);
@@ -70,6 +86,19 @@ public class SisController : MonoBehaviour {
         } else {
             weeklyDialogue = "Salamat po sa bagong uniform ko, Pa!";
         }
+        
+        return weeklyDialogue;
+    }
+
+    public string GetDialogue3(){
+        // sets weekly dialogue
+        // if( requests.Count > 0 ){
+        //     weeklyDialogue = "Pa, kailangan ko ng bagong uniform para sa school. (1 week)";
+        // } else {
+        //     weeklyDialogue = "Salamat po sa bagong uniform ko, Pa!";
+        // }
+
+        weeklyDialogue = "Natatakot ako sa sitwasyon ni Antonio, pa. Sana di siya masasaktan.";
         
         return weeklyDialogue;
     }

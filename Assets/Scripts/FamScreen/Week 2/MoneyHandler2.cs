@@ -55,6 +55,9 @@ public class MoneyHandler2 : MonoBehaviour {
             money -= price;
             moneyUI.text = "₱ " + money.ToString();
 
+            // remove request from Sis
+            SisController.RemoveUniformRequest();
+
             // once bought, disable the button
             sisRqButton.interactable = false;
             sisRq.GetComponentInChildren<Text>().text = "BOUGHT";
@@ -71,6 +74,8 @@ public class MoneyHandler2 : MonoBehaviour {
         if( money >= price ){
             money -= price;
             moneyUI.text = "₱ " + money.ToString();
+
+            MomController.RemoveGroceryRequest();
 
             // once bought, disable the button
             momRqButton.interactable = false;

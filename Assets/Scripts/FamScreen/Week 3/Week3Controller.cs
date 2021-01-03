@@ -48,7 +48,7 @@ public class Week3Controller : MonoBehaviour
     // Update is called once per frame
     public void UpdateRequest(){
         // Mom requests
-        KeyValuePair<string, int> mrq = mom.GetRequest2();
+        KeyValuePair<string, int> mrq = mom.GetRequest3();
         string mrqText = mrq.Key.Equals("None") ? "Request: " + mrq.Key : "Request: " + mrq.Key + " - ₱ " + mrq.Value.ToString();
         momRequest.text = mrqText;
         momRqPrice = mrq.Value;
@@ -60,7 +60,7 @@ public class Week3Controller : MonoBehaviour
         }
 
         // Sis requests
-        KeyValuePair<string, int> srq = sis.GetRequest2();
+        KeyValuePair<string, int> srq = sis.GetRequest3();
         string srqText = srq.Key.Equals("None") ? "Request: " + srq.Key : "Request: " + srq.Key + " - ₱ " + srq.Value.ToString();
         sisRequest.text = srqText;
         sisRqPrice = srq.Value;
@@ -85,9 +85,9 @@ public class Week3Controller : MonoBehaviour
     }
 
     public void UpdateDialogue(){
-        momDialogue.text = mom.GetDialogue2();
-        sisDialogue.text = sis.GetDialogue2();
-        broDialogue.text = bro.GetDialogue2();
+        momDialogue.text = mom.GetDialogue3();
+        sisDialogue.text = sis.GetDialogue3();
+        broDialogue.text = "...";//bro.GetDialogue2();
     }
 
     public int GetMomRqPrice(){
