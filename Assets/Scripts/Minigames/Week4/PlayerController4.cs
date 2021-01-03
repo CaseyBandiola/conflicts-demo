@@ -56,6 +56,20 @@ public class PlayerController4 : MonoBehaviour
                 transform.Translate(0, speed * Time.deltaTime, 0);
             }
         }
+
+        // powerup collision
+        if ( collidingObject.gameObject.tag == "Evidence" && collidingObject.gameObject.name == "Bike" ){
+            // Increment score then destroy object
+            AddSpeed(2.25f);
+            Destroy(collidingObject.gameObject);
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collidingTrigger){
+        if (collidingTrigger.gameObject.tag == "Exit"){
+            // end game
+        }
     }
 
     public void AddSpeed(float s){
