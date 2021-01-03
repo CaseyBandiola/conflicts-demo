@@ -7,16 +7,14 @@ public class PlayerController4 : MonoBehaviour
     private float speed;
     // Start is called before the first frame update
     void Start(){
-        speed = 0.5f;
+        speed = 1.8f;
     }
 
     // Update is called once per frame
     void Update() {
         //float horizontal = Input.GetAxis("Horizontal");
         MovePlayer();
-        if( Input.GetKey(KeyCode.Space) ){
-            AddSpeed(1f);
-        }
+
     }
 
     private void MovePlayer(){
@@ -60,7 +58,13 @@ public class PlayerController4 : MonoBehaviour
         // powerup collision
         if ( collidingObject.gameObject.tag == "Evidence" && collidingObject.gameObject.name == "Bike" ){
             // Increment score then destroy object
-            AddSpeed(2.25f);
+            AddSpeed(2.45f);
+            Destroy(collidingObject.gameObject);
+        }
+
+        if (collidingObject.gameObject.tag == "Evidence" && collidingObject.gameObject.name == "Watch"){
+            // Increment score then destroy object
+            Timer4.AddTime();
             Destroy(collidingObject.gameObject);
         }
 
