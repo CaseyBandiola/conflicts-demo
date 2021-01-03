@@ -133,7 +133,7 @@ public class PlayerController3 : MonoBehaviour{
         //evidenceAmt.text = "Evidence collected: " + evidenceCollected;
         // if-checks to show the name little by little
         if( evidenceCollected == 2 ){
-            antonio.text = "A__I_";
+            antonio.text = "A____I_"; // A____I_
         }
 
         if( evidenceCollected == 4 ){
