@@ -100,4 +100,8 @@ public class MoneyHandler2 : MonoBehaviour {
         money += amt;
         moneyUI.text = "₱ " + money.ToString();
     }
+
+    public int GetMoney(){
+        return money;
+    }
 }
