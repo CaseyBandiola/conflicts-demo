@@ -43,7 +43,13 @@ public class SisController : MonoBehaviour {
             weeklyRequest = requests.ElementAt(rqIndex);
         }
         
-        //weeklyRequest = requests.ElementAt(0);
+        // if there is still a request, force it, otherwise, force none
+        if( requests.Count == 1 ){
+            weeklyRequest = requests.ElementAt(0);
+        } else {
+            weeklyRequest = new KeyValuePair<string, int>("None", 0);
+        }
+        
 
         return weeklyRequest;
     }

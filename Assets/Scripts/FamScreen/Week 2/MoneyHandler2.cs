@@ -49,41 +49,51 @@ public class MoneyHandler2 : MonoBehaviour {
 
     // code for sister's requests
     public void BuySisRequest() {
-        // buy the request
+        // buy the request if there's enough money
         int price = endWeek.GetSisRqPrice();
-        money -= price;
-        moneyUI.text = "₱ " + money.ToString();
+        if( money >= price ){
+            money -= price;
+            moneyUI.text = "₱ " + money.ToString();
 
-        // once bought, disable the button
-        sisRqButton.interactable = false;
-        sisRq.GetComponentInChildren<Text>().text = "BOUGHT";
-        sisBtnStar.enabled = false;
+            // once bought, disable the button
+            sisRqButton.interactable = false;
+            sisRq.GetComponentInChildren<Text>().text = "BOUGHT";
+            sisBtnStar.enabled = false;
+        }
+        // else do nothing
+        
     }
 
     // code for mom's requests
     public void BuyMomRequest(){
-        // buy the request
+        // buy the request if there's enough money
         int price = endWeek.GetMomRqPrice();
-        money -= price;
-        moneyUI.text = "₱ " + money.ToString();
+        if( money >= price ){
+            money -= price;
+            moneyUI.text = "₱ " + money.ToString();
 
-        // once bought, disable the button
-        momRqButton.interactable = false;
-        momRq.GetComponentInChildren<Text>().text = "BOUGHT";
-        momBtnStar.enabled = false;
+            // once bought, disable the button
+            momRqButton.interactable = false;
+            momRq.GetComponentInChildren<Text>().text = "BOUGHT";
+            momBtnStar.enabled = false;
+        }
+        
     }
 
     // code for brother's requests
     public void BuyBroRequest(){
-        // buy the request
+        // buy the request if there's enough money
         int price = endWeek.GetBroRqPrice();
-        money -= price;
-        moneyUI.text = "₱ " + money.ToString();
+        if( money >= price ){
+            money -= price;
+            moneyUI.text = "₱ " + money.ToString();
 
-        // once bought, disable the button
-        broRqButton.interactable = false;
-        broRq.GetComponentInChildren<Text>().text = "BOUGHT";
-        broBtnStar.enabled = false;
+            // once bought, disable the button
+            broRqButton.interactable = false;
+            broRq.GetComponentInChildren<Text>().text = "BOUGHT";
+            broBtnStar.enabled = false;
+        }
+        
     }
 
     public void AddMoney(int amt){
